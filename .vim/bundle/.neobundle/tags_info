@@ -1,0 +1,7 @@
+lightline.vim
+neobundle.vim
+neocomplete.vim
+unite.vim
+vim-colors-solarized
+vim-quickrun
+vimproc
