@@ -1,24 +1,6 @@
 "互換モード無効
 set nocompatible
 
-"しんたっくす
-syntax on
-
-"行番号
-set number
-
-"インデント
-set autoindent
-set smartindent
-filetype plugin indent on
-
-"swapファイルを作らない
-set noswapfile
-set nobackup
-
-"国際化isじゅうよう
-set encoding=UTF-8
-
 "neobundle.vimの設定
 if has('vim_starting')
 	set runtimepath+=~/.vim/bundle/neobundle.vim/
@@ -33,7 +15,7 @@ NeoBundle 'Shougo/vimproc', {
 	\ 'build' : {
 	\	'windows' : 'make -f make_mingw32.mak',
 	\	'cygwin' : 'make -f make_cygwin.mak',
-	\	'mac' : 'make -f make_mac.mak'
+	\	'mac' : 'make -f make_mac.mak',
 	\	'unix' : 'make -f make_unix.mak',
 	\	},
 	\}
@@ -65,3 +47,22 @@ set notitle
 
 "Ricty
 set guifont=Ricty\ 11
+
+"国際化isじゅうよう
+set encoding=UTF-8
+
+"syntax
+syntax on
+
+"行番号
+set number
+
+"インデント
+set autoindent
+set smartindent
+filetype plugin indent on
+
+"no more swapfile
+set noswapfile
+set nobackup
+
