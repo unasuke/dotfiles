@@ -1,9 +1,23 @@
-#export path='/usr/local/bin:$PATH'
-export EDITOR=/Applications/MacVim.app/Contents/MacOS/Vim
-alias vi='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
-alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
-autoload -U compinit
-compinit
+#環境変数を日本語に
+export LANG=ja_JP.UTF-8
+
+#OS別の設定
+case "${OSTYPE}" in
+#Mac
+darwin*)
+	#export path='/usr/local/bin:$PATH'
+	#MacVimのPATHを設定
+	export EDITOR=/Applications/MacVim.app/Contents/MacOS/Vim
+	alias vi='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
+	alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim "$@"'
+
+	#homebrew用の補完情報
+	path=(~/bin(N-/) /usr/local/bin(N-/) ${path})
+	;;
+#linux
+linux*)
+	;;
+esac
 
 case "${TERM}" in
 kterm*|xterm)
@@ -13,5 +27,7 @@ kterm*|xterm)
 	;;
 esac
 
-#homebrewのPATH
-path=(~/bin(N-/) /usr/local/bin(N-/) ${path})
+#補完的な？
+autoload -U compinit
+compinit
+
