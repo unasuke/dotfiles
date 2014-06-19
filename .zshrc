@@ -31,3 +31,11 @@ esac
 autoload -U compinit
 compinit
 
+if [ -f ~/.zsh_profile ]; then
+	. ~/.zsh_profile
+fi
+
+# ヒストリの設定
+HISTFILE=~/.zsh_history
+HISTSIZE=1000000
+SAVEHIST=1000000
