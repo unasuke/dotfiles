@@ -5,3 +5,5 @@
 	email = yusuke1994525@gmail.com
 [push]
 	default = simple
+[core]
+	excludesfile = ~/.gitignore_global
