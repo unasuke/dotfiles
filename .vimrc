@@ -11,7 +11,7 @@ call neobundle#rc(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 "非同期処理
-NeoBundle 'Shougo/vimproc', {
+NeoBundle 'Shougo/vimproc.vim', {
 	\ 'build' : {
 	\	'windows' : 'make -f make_mingw32.mak',
 	\	'cygwin' : 'make -f make_cygwin.mak',
@@ -41,6 +41,9 @@ set laststatus=2
 let g:lightline = {
 	\ 'colorscheme' : 'solarized' ,
 	\}
+
+"日本語ドキュメント
+NeoBundle 'vim-jp/vimdoc-ja'
 
 "Vimを使ってくれてありがとう!!!!!!!!!!
 set notitle
