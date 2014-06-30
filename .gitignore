@@ -4,3 +4,4 @@
 
 #NeoBundle管理下
 /.vim/bundle/
+/.vim/bundle/.neobundle/
