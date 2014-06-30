@@ -4,4 +4,5 @@ neocomplete.vim
 unite.vim
 vim-colors-solarized
 vim-quickrun
-vimproc
+vimdoc-ja
+vimproc.vim
