@@ -87,4 +87,4 @@ setopt extended_glob
 ####################
 ##alias
 
-alias ls='ls -alG'
+alias la='ls -alG'
