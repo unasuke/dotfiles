@@ -1,6 +1,3 @@
-"互換モード無効
-set nocompatible
-
 "neobundle.vimの設定
 if has('vim_starting')
 	set runtimepath+=~/.vim/bundle/neobundle.vim/
