@@ -41,6 +41,7 @@ let g:lightline = {
 
 "日本語ドキュメント
 NeoBundle 'vim-jp/vimdoc-ja'
+set helplang=ja,en
 
 "Vimを使ってくれてありがとう!!!!!!!!!!
 set notitle
