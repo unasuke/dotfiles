@@ -36,7 +36,7 @@ zstyle ':completion:*' ignore-parents parent pwd ..
 
 #sudoのうしろでコマンド名補完
 zstyle 'completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin \
-	/usr/sbin /usr/bin /sbin /bin /usr/X11R6/bin 
+	/usr/sbin /usr/bin /sbin /bin /usr/X11R6/bin
 
 if [ -f ~/.zsh_profile ]; then
 	. ~/.zsh_profile
@@ -88,3 +88,10 @@ setopt extended_glob
 ##alias
 
 alias la='ls -alG'
+
+###################
+##prompt
+
+local p_cdir="%F{blue}[%~]%f"$'\n'
+local p_info="%n@%m"
+PROMPT=" $p_cdir$p_info > "
