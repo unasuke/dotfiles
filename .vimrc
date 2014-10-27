@@ -27,7 +27,7 @@ NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'altercation/vim-colors-solarized'
 set t_Co=256
 set background=dark
-colorscheme solarized
+"colorscheme solarized
 
 "補完
 NeoBundle 'Shougo/neocomplete.vim'
@@ -69,3 +69,6 @@ set nobackup
 
 call neobundle#end()
 NeoBundleCheck
+
+" colorscheme setting moved here
+colorscheme solarized
