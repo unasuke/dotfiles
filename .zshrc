@@ -94,4 +94,4 @@ alias la='ls -alG'
 
 local p_cdir=$'\n'"%F{blue}[%~]%f"$'\n'
 local p_info="%n@%m"
-PROMPT=" $p_cdir$p_info $ "
+PROMPT=" $p_cdir$p_info %# "
