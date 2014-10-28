@@ -7,7 +7,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-"非同期処理
+" install plugins
 NeoBundle 'Shougo/vimproc.vim', {
 	\ 'build' : {
 	\	'windows' : 'make -f make_mingw32.mak',
@@ -17,29 +17,15 @@ NeoBundle 'Shougo/vimproc.vim', {
 	\	},
 	\}
 
-"すごいunite
 NeoBundle 'Shougo/unite.vim'
-
-"プログラムの簡易実行結果
 NeoBundle 'thinca/vim-quickrun'
-
-"solarized
 NeoBundle 'altercation/vim-colors-solarized'
-"set t_Co=256
-"set background=dark
-"colorscheme solarized
-
-"補完
 NeoBundle 'Shougo/neocomplete.vim'
-
-"lightline
 NeoBundle 'itchyny/lightline.vim'
 set laststatus=2
 let g:lightline = {
 	\ 'colorscheme' : 'solarized' ,
 	\}
-
-"日本語ドキュメント
 NeoBundle 'vim-jp/vimdoc-ja'
 set helplang=ja,en
 
