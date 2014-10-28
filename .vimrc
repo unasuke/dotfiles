@@ -22,29 +22,30 @@ NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'itchyny/lightline.vim'
-set laststatus=2
-let g:lightline = {
-	\ 'colorscheme' : 'solarized' ,
-	\}
 NeoBundle 'vim-jp/vimdoc-ja'
+
+call neobundle#end()
+NeoBundleCheck
+
+" help language use Japanese
 set helplang=ja,en
 
-"Vimを使ってくれてありがとう!!!!!!!!!!
+" vimを使ってくれてありがとう!!!!!!!!!!
 set notitle
 
-"Ricty
+" Ricty
 set guifont=Ricty\ 11
 
-"国際化isじゅうよう
+" use UTF-8
 set encoding=UTF-8
 
-"syntax
+" syntax
 syntax on
 
-"行番号
+" line number
 set number
 
-"インデント
+" indent setting
 set autoindent
 set smartindent
 filetype plugin indent on
@@ -53,10 +54,13 @@ filetype plugin indent on
 set noswapfile
 set nobackup
 
-call neobundle#end()
-NeoBundleCheck
+" status line setting
+set laststatus=2
+let g:lightline = {
+	\ 'colorscheme' : 'solarized' ,
+	\}
 
-"colorscheme setting moved here
+"colorscheme setting
 set t_Co=256
 set background=dark
 colorscheme solarized
