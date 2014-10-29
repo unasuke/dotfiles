@@ -87,6 +87,10 @@ setopt extended_glob
 ####################
 ##alias
 
+##git alias
+alias gits='git status'
+alias gitc='git commit'
+
 alias la='ls -alG'
 
 ###################
