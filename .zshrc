@@ -31,6 +31,10 @@ esac
 autoload -U compinit
 compinit
 
+#先方予測
+autoload -U predict-on
+predict-on
+
 #../の後は今いるディレクトリを補完しない
 zstyle ':completion:*' ignore-parents parent pwd ..
 
