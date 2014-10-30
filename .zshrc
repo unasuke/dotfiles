@@ -91,6 +91,8 @@ setopt auto_pushd
 #誤り訂正
 setopt correct
 
+#aliasも展開して補完
+setopt complete_aliases
 
 ####################
 ##alias
