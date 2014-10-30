@@ -84,6 +84,10 @@ setopt auto_menu
 #高機能なワイルドカード展開を使用する
 setopt extended_glob
 
+#auto cd
+setopt auto_cd
+setopt auto_pushd
+
 ####################
 ##alias
 
