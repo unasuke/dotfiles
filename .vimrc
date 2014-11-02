@@ -65,3 +65,10 @@ set t_Co=256
 set background=dark
 colorscheme solarized
 
+" convert file encode
+function SetUU()
+	set ff=unix
+	set fenc=utf8
+endfunction
+command -nargs=0 SetUU call SetUU()
+
