@@ -1,7 +1,0 @@
-urxvt.geometry:60*20
-urxvt.saveLines:512
-
-urxvt.allow_bold:false
-urxvt*font:xft:Ricty:size=12:antialias=true
-
-urxvt.preeditType:OverTheSpot
