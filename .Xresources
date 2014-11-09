@@ -1,0 +1,2 @@
+urxvt.allow_bold:false
+urxvt*font:xft:Ricty:size=13:antialias=true
