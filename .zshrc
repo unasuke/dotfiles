@@ -32,7 +32,7 @@ autoload -U compinit
 compinit
 
 #補完時に英大文字と小文字を無視する
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
 #../の後は今いるディレクトリを補完しない
 zstyle ':completion:*' ignore-parents parent pwd ..
