@@ -1,11 +1,14 @@
 #環境変数を日本語に
 export LANG=ja_JP.UTF-8
 
+#vim
+export EDITOR=vim
+
 #OS別の設定
 case "${OSTYPE}" in
 #Mac
 darwin*)
-	#export path='/usr/local/bin:$PATH'
+	export path='/usr/local/bin:$PATH'
 	#homebrew用の補完情報
 	path=(~/bin(N-/) /usr/local/bin(N-/) ${path})
 	;;
