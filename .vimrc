@@ -72,3 +72,5 @@ function SetUU()
 endfunction
 command -nargs=0 SetUU call SetUU()
 
+"use backspace
+set backspace=indent,eol,start
