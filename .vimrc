@@ -7,7 +7,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-" install plugins
+"install plugins
 NeoBundle 'Shougo/vimproc.vim', {
 	\ 'build' : {
 	\	'windows' : 'make -f make_mingw32.mak',
@@ -27,25 +27,25 @@ NeoBundle 'vim-jp/vimdoc-ja'
 call neobundle#end()
 NeoBundleCheck
 
-" help language use Japanese
+"help language use Japanese
 set helplang=ja,en
 
-" vimを使ってくれてありがとう!!!!!!!!!!
+"vimを使ってくれてありがとう!!!!!!!!!!
 set notitle
 
-" Ricty
+"Ricty
 set guifont=Ricty\ 11
 
-" use UTF-8
+"use UTF-8
 set encoding=UTF-8
 
-" syntax
+"syntax
 syntax on
 
-" line number
+"line number
 set number
 
-" indent setting
+"indent setting
 set autoindent
 set smartindent
 filetype plugin indent on
@@ -54,7 +54,7 @@ filetype plugin indent on
 set noswapfile
 set nobackup
 
-" status line setting
+"status line setting
 set laststatus=2
 let g:lightline = {
 	\ 'colorscheme' : 'solarized' ,
@@ -65,7 +65,7 @@ set t_Co=256
 set background=dark
 colorscheme solarized
 
-" convert file encode
+"convert file encode
 function SetUU()
 	set ff=unix
 	set fenc=utf8
