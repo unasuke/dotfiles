@@ -101,6 +101,7 @@ setopt complete_aliases
 ##git alias
 alias gits='git status'
 alias gitc='git commit'
+alias gitl='git log --oneline --decorate --color --graph'
 
 alias la='ls -alG'
 
