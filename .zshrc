@@ -108,6 +108,10 @@ alias la='ls -alG'
 ###################
 ##prompt
 
+#current directory path
 local p_cdir=$'\n'"%F{blue}[%~]%f"$'\n'
+
+#username and hostname
 local p_info="%n@%m"
+
 PROMPT=" $p_cdir$p_info %# "
