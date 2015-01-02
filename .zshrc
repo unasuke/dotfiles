@@ -17,13 +17,13 @@ linux*)
 	;;
 esac
 
-case "${TERM}" in
-kterm*|xterm)
-	precmd() {
-		echo -ne "\033]0;${USER}@${HOST%%.*}:${PWD}\007"
-	}
-	;;
-esac
+# case "${TERM}" in
+# kterm*|xterm)
+# 	precmd() {
+# 		echo -ne "\033]0;${USER}@${HOST%%.*}:${PWD}\007"
+# 	}
+# 	;;
+# esac
 
 #補完的な？
 autoload -U compinit
