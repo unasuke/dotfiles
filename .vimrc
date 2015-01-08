@@ -23,6 +23,7 @@ NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'vim-jp/vimdoc-ja'
+NeoBundle 'vim-ruby/vim-ruby'
 
 call neobundle#end()
 NeoBundleCheck
