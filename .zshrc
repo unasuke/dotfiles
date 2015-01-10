@@ -14,7 +14,7 @@ darwin*)
 	;;
 #linux
 linux*)
-	;;
+	path=(/usr/local/bin(N-/) $path)
 esac
 
 # case "${TERM}" in
