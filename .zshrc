@@ -95,6 +95,9 @@ setopt correct
 #aliasも展開して補完
 setopt complete_aliases
 
+#Ctrl+rで履歴から補完
+bindkey -e
+
 ####################
 ##alias
 
