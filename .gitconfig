@@ -9,4 +9,5 @@
 	excludesfile = ~/.gitignore_global
 [ghq]
 	root = ~/src
-
+[alias]
+	miku = !git stash 1> /dev/null && echo 'もうしょうがないにゃぁ、この変更はみくが覚えておくにゃ！'
