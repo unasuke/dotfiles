@@ -118,3 +118,7 @@ local p_cdir=$'\n'"%F{blue}[%~]%f"$'\n'
 local p_info="%n@%m"
 
 PROMPT=" $p_cdir$p_info %# "
+
+##rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
