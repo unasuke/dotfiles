@@ -103,6 +103,11 @@ bindkey -e
 
 alias la='ls -alG'
 
+##peco
+
+#cd repository
+alias repo='cd $(ghq list -p | peco)'
+
 ###################
 ##prompt
 
