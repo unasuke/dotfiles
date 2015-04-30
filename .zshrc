@@ -101,11 +101,6 @@ bindkey -e
 ####################
 ##alias
 
-##git alias
-alias gits='git status'
-alias gitc='git commit -v'
-alias gitl='git log --oneline --decorate --color --graph'
-
 alias la='ls -alG'
 
 ###################
