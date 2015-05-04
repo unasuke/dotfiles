@@ -7,6 +7,8 @@
 	default = simple
 [core]
 	excludesfile = ~/.gitignore_global
+	precomposeunicode = true
+	quotepath = false
 [ghq]
 	root = ~/src
 [alias]
