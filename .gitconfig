@@ -16,4 +16,6 @@
 	sh = stash
 	c = commit -v
 	l = log --oneline --decorate --color --graph
+	pl = pull
+	ps = push
 	miku = !git stash 1> /dev/null && echo 'もうしょうがないにゃぁ、この変更はみくが覚えておくにゃ！'
