@@ -24,6 +24,7 @@ NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'vim-jp/vimdoc-ja'
 NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'wakatime/vim-wakatime'
 
 call neobundle#end()
 NeoBundleCheck
