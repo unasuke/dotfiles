@@ -27,7 +27,7 @@ esac
 
 #補完的な？
 autoload -U compinit
-compinit
+compinit -u
 
 #補完時に英大文字と小文字を無視する
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
