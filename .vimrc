@@ -25,6 +25,9 @@ NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'vim-jp/vimdoc-ja'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'wakatime/vim-wakatime'
+NeoBundle 'slim-template/vim-slim'
+NeoBundle 'scrooloose/nerdtree' 
+NeoBundle 'Shougo/vimshell.vim'
 
 call neobundle#end()
 NeoBundleCheck
@@ -35,8 +38,8 @@ set helplang=ja,en
 "vimを使ってくれてありがとう!!!!!!!!!!
 set notitle
 
-"Ricty
-set guifont=Ricty\ 11
+"Ricty(only gvim?)
+set guifont=Ricty:h16
 
 "use UTF-8
 set encoding=UTF-8
@@ -51,6 +54,9 @@ set number
 set autoindent
 set smartindent
 filetype plugin indent on
+set expandtab
+set shiftwidth=2
+set softtabstop=2
 
 "no more swapfile
 set noswapfile
@@ -69,10 +75,16 @@ colorscheme solarized
 
 "convert file encode
 function SetUU()
-	set ff=unix
-	set fenc=utf8
+  set ff=unix
+  set fenc=utf8
 endfunction
 command -nargs=0 SetUU call SetUU()
 
 "use backspace
 set backspace=indent,eol,start
+
+"Neocomplete
+source ~/.neocomplete.vim
+
+"NerdTree
+source ~/.nerdtree.vim
