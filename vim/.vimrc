@@ -33,6 +33,7 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'Shougo/vimfiler.vim'
 NeoBundle 'sjl/gundo.vim'
+NeoBundle 'kchmck/vim-coffee-script'
 
 call neobundle#end()
 NeoBundleCheck
