@@ -103,6 +103,8 @@ bindkey -e
 
 alias la='ls -alG'
 
+alias g='git'
+
 ##peco
 
 #cd repository
