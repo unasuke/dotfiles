@@ -34,6 +34,11 @@ NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'Shougo/vimfiler.vim'
 NeoBundle 'sjl/gundo.vim'
 NeoBundle 'kchmck/vim-coffee-script'
+"NeoBundle 'Townk/vim-autoclose'
+NeoBundle 'jiangmiao/auto-pairs'
+NeoBundle 'haya14busa/incsearch.vim'
+NeoBundle 'ap/vim-css-color'
+NeoBundle 'tpope/vim-haml'
 
 call neobundle#end()
 NeoBundleCheck
