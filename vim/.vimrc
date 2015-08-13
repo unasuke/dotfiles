@@ -174,3 +174,19 @@ endfunction
 function! MyMode()
   return winwidth(0) > 60 ? lightline#mode() : ''
 endfunction
+
+"tabs
+nnoremap <silent> <Space>j :tabnext<CR>
+nnoremap <silent> <Space>l :tabprevious<CR>
+nnoremap <silent> <Space>t :tabedit<CR>
+
+nmap ; :
+
+set clipboard=unnamed,autoselect
+
+"incsearch
+set hlsearch
+let g:incsearch#auto_nohlsearch = 1
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
