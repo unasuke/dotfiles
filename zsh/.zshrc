@@ -104,6 +104,7 @@ bindkey -e
 alias la='ls -alG'
 
 alias g='git'
+compdef g=git
 
 ##peco
 
