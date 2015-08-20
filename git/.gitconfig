@@ -1,21 +1,21 @@
 [color]
-	ui = true
+  ui = true
 [user]
-	name = Yusuke Nakamura
-	email = yusuke1994525@gmail.com
+  name = Yusuke Nakamura
+  email = yusuke1994525@gmail.com
 [push]
-	default = simple
+  default = simple
 [core]
-	excludesfile = ~/.gitignore_global
-	precomposeunicode = true
-	quotepath = false
+  excludesfile = ~/.gitignore_global
+  precomposeunicode = true
+  quotepath = false
 [ghq]
-	root = ~/src
+  root = ~/src
 [alias]
-	s = status
-	sh = stash
-	c = commit -v
-	l = log --oneline --decorate --color --graph
-	pl = pull
-	ps = push
-	miku = !git stash 1> /dev/null && echo 'もうしょうがないにゃぁ、この変更はみくが覚えておくにゃ！'
+  s = status
+  sh = stash
+  c = commit -v
+  l = log --oneline --decorate --color --graph
+  pl = pull
+  ps = push
+  miku = !git stash 1> /dev/null && echo 'もうしょうがないにゃぁ、この変更はみくが覚えておくにゃ！'
