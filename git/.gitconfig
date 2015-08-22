@@ -18,6 +18,7 @@
   l = log --oneline --decorate --color --graph
   pl = pull
   ps = push
+  ch = checkout
   chb = checkout -b
   ad = add
   miku = !git stash 1> /dev/null && echo 'もうしょうがないにゃぁ、この変更はみくが覚えておくにゃ！'
