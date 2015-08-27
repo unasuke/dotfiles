@@ -192,3 +192,10 @@ map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
 
 let g:gitgutter_max_signs = 1000
+
+" I don't use octal
+set nrformats-=octal
+
+" NO BEEPS!!!!!!!!!!!!!!!!!!!!!!!!!
+set noerrorbells
+set vb t_vb=
