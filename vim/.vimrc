@@ -79,7 +79,7 @@ let g:lightline = {
   \ 'colorscheme' : 'solarized' ,
   \ 'mode_map' : {'c': 'NORMAL'},
   \ 'active' : {
-  \   'left' : [['mode', 'paste'], ['fugitive', 'filename']]
+  \   'left' : [['mode', 'paste'], ['fugitive', 'filename', 'modified']]
   \ },
   \ 'conponent_function' : {
   \   'modified' : 'MyModified',
