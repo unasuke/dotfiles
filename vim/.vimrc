@@ -187,6 +187,7 @@ nmap ; :
 set clipboard=unnamed,autoselect
 
 "incsearch
+set incsearch
 set hlsearch
 let g:incsearch#auto_nohlsearch = 1
 map /  <Plug>(incsearch-forward)
