@@ -79,21 +79,71 @@ set nobackup
 set laststatus=2
 let g:lightline = {
   \ 'colorscheme' : 'solarized' ,
-  \ 'mode_map' : {'c': 'NORMAL'},
   \ 'active' : {
   \   'left' : [['mode', 'paste'], ['fugitive', 'filename', 'modified']]
   \ },
   \ 'conponent_function' : {
-  \   'modified' : 'MyModified',
-  \   'readonly' : 'MyReadonly',
-  \   'fugitive' : 'MyFugitive',
-  \   'filename' : 'MyFilename',
-  \   'fileformat' : 'MyFileformat',
-  \   'filetype' : 'MyFiletype',
-  \   'fileencoding' : 'MyFileencoding',
-  \   'mode' : 'MyMode'
+  \   'modified' : 'LightLineModified',
+  \   'readonly' : 'LightLineReadonly',
+  \   'fugitive' : 'LightLineFugitive',
+  \   'filename' : 'LightLineFilename',
+  \   'fileformat' : 'LightLineFileformat',
+  \   'filetype' : 'LightLineFiletype',
+  \   'fileencoding' : 'LightLineFileencoding',
+  \   'mode' : 'LightLineMode'
   \ }
   \ }
+
+function! LightLineModified()
+  return &ft =~ 'help\|nerdtree\|undotree\|vimfiler\|gundo\|diff\|qf' ? '': @% == '[YankRing]' ? '' : &modified ? '+' : &modifiable ? '' : '-'
+endfunction
+
+function! LightLineReadonly()
+  return &ft !~? 'help\|nerdtree\|undotree\|vimfiler\|gundo\|diff' && &readonly ? 'x' : ''
+endfunction
+
+function! LightLineFilename()
+  return &ft == 'nerdtree' ? 'NERDTree' :
+       \ &ft == 'undotree' ? 'undotree' :
+       \ &ft == 'diff' ? 'diffpanel' :
+       \ &ft == 'qf' ? 'Quickfix' :
+       \ &ft == 'vimshell' ? vimshell#get_status_string() :
+       \ @% == '[YankRing]' ? 'YankRing' :
+       \ &ft == 'unite' ? unite#get_status_string() :
+       \ ('' != @% ? @% : '[No Name]') .
+       \ ('' != LightLineReadonly() ? LightLineReadonly() . ' ' : '') .
+       \ ('' != LightLineModified() ? ' ' . LightLineModified() : '')
+endfunction
+
+function! LightLineFugitive()
+  "let filename = expand('%:t')
+  if &ft !~? 'help\|nerdtree\|undotree\|quickrun\|vimfiler\|gundo\|qf' && @% != '[YankRing]' && exists("*fugitive#head")
+    let branch = fugitive#head()
+    return strlen(branch) ? branch : ''
+  endif
+  return ''
+endfunction
+
+function! LightLineFileformat()
+  return winwidth(0) > 70 ? &fileformat : ''
+endfunction
+
+function! LightLineFiletype()
+  return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype : 'no ft') : ''
+endfunction
+
+function! LightLineFileencoding()
+  return winwidth(0) > 70 ? (strlen(&fenc) ? &fenc : &enc) : ''
+endfunction
+
+function! LightLineMode()
+  return &ft == 'qf' ? '' :
+       \ @% == '[YankRing]' ? '' :
+       \ winwidth(0) > 60 ? lightline#mode() : ''
+endfunction
+
+let g:vimshell_force_overwrite_statusline= 0
+autocmd CursorMoved ControlP let w:lightline = 0
 
 "colorscheme setting
 set t_Co=256
@@ -133,49 +183,6 @@ let g:indent_guides_auto_colors = 1
 "hi IndentGuidesOdd ctermbg=grey
 "hi IndentGuidesEven ctermbg=darkgrey
 
-function! MyModified()
-  return &ft =~ 'help\|vimfiler\|gundo' ? '' : &modified ? '+' : &modifiable ? '' : '-'
-endfunction
-
-function! MyReadonly()
-  return &ft !~? 'help\|vimfiler\|gundo' && &readonly ? 'x' : ''
-endfunction
-
-function! MyFilename()
-  return ('' != MyReadonly() ? MyReadonly() . ' ' : '') .
-        \ (&ft == 'vimfiler' ? vimfiler#get_status_string() :
-        \  &ft == 'unite' ? unite#get_status_string() :
-        \  &ft == 'vimshell' ? vimshell#get_status_string() :
-        \ '' != expand('%:t') ? expand('%:t') : '[No Name]') .
-        \ ('' != MyModified() ? ' ' . MyModified() : '')
-endfunction
-
-function! MyFugitive()
-  try
-    if &ft !~? 'vimfiler\|gundo' && exists('*fugitive#head')
-      let branch = fugitive#head()
-      return strlen(branch) ? branch : ''
-    endif
-  catch
-  endtry
-  return ''
-endfunction
-
-function! MyFileformat()
-  return winwidth(0) > 70 ? &fileformat : ''
-endfunction
-
-function! MyFiletype()
-  return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype : 'no ft') : ''
-endfunction
-
-function! MyFileencoding()
-  return winwidth(0) > 70 ? (strlen(&fenc) ? &fenc : &enc) : ''
-endfunction
-
-function! MyMode()
-  return winwidth(0) > 60 ? lightline#mode() : ''
-endfunction
 
 "tabs
 nnoremap <silent> <Space>j :tabnext<CR>
