@@ -21,4 +21,6 @@
   ch = checkout
   chb = checkout -b
   ad = add
+  d = diff
+  dc = diff --cached
   miku = !git stash 1> /dev/null && echo 'もうしょうがないにゃぁ、この変更はみくが覚えておくにゃ！'
