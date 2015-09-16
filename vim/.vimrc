@@ -209,3 +209,7 @@ set nrformats-=octal
 " NO BEEPS!!!!!!!!!!!!!!!!!!!!!!!!!
 set noerrorbells
 set vb t_vb=
+
+set virtualedit+=block
+
+"set updatetime=10
