@@ -109,7 +109,7 @@ compdef g=git
 ##peco
 
 #cd repository
-alias repo='cd $(ghq list -p | peco)'
+alias e='cd $(ghq list -p | peco)'
 
 ###################
 ##prompt
