@@ -82,7 +82,7 @@ let g:lightline = {
   \ 'active' : {
   \   'left' : [['mode', 'paste'], ['fugitive', 'filename', 'modified']]
   \ },
-  \ 'conponent_function' : {
+  \ 'component_function' : {
   \   'modified' : 'LightLineModified',
   \   'readonly' : 'LightLineReadonly',
   \   'fugitive' : 'LightLineFugitive',
