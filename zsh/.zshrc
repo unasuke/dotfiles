@@ -135,4 +135,5 @@ bindkey '^r' peco-select-history
 
 # zsh-bundle-exec
 # see also https://github.com/rhysd/zsh-bundle-exec
+export BUNDLE_EXEC_GEMFILE_CURRENT_DIR_ONLY=yes
 source ~/.zsh-bundle-exec
