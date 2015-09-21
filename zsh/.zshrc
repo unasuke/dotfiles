@@ -132,3 +132,7 @@ function peco-select-history() {
 }
 zle -N peco-select-history
 bindkey '^r' peco-select-history
+
+# zsh-bundle-exec
+# see also https://github.com/rhysd/zsh-bundle-exec
+source ~/.zsh-bundle-exec
