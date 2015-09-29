@@ -102,6 +102,7 @@ bindkey -e
 ##alias
 
 alias la='ls -alGh'
+alias ll='ls -lGh'
 
 alias g='git'
 compdef g=git
