@@ -41,6 +41,9 @@ NeoBundle 'tpope/vim-haml'
 NeoBundle 'Xuyuanp/nerdtree-git-plugin'
 NeoBundle 'puppetlabs/puppet-syntax-vim'
 NeoBundle 'tpope/vim-rails'
+NeoBundle "osyo-manga/shabadou.vim"
+NeoBundle "osyo-manga/vim-watchdogs"
+NeoBundle "othree/html5.vim"
 
 call neobundle#end()
 NeoBundleCheck
@@ -215,3 +218,30 @@ set virtualedit+=block
 "set updatetime=10
 
 let g:gitgutter_sign_column_always = 1
+
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "*",
+    \ "Staged"    : "*",
+    \ "Untracked" : "*",
+    \ "Renamed"   : "*",
+    \ "Unmerged"  : "*",
+    \ "Deleted"   : "*",
+    \ "Dirty"     : "*",
+    \ "Clean"     : "*",
+    \ "Unknown"   : "*"
+    \ }
+
+" highlight cursor position
+set cursorline
+augroup CursorLineOnlyCurrentWindow
+    autocmd!
+    autocmd WinLeave * set nocursorline
+    autocmd WinEnter,BufRead * set cursorline
+augroup END
+set lazyredraw
+set ttyfast
+
+" enable syntax check
+let g:watchdogs_check_BufWritePost_enable = 1
+
+setlocal iskeyword+=-
