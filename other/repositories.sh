@@ -15,7 +15,6 @@ git@github.com/mruby/mruby.git
 git@github.com/nikuzuki/QuizMaker.git
 git@github.com/nikuzuki/Taskapp.git
 git@github.com/nikuzuki/UnaEscape.git
-git@github.com/nikuzuki/UnasukeEscape.git
 git@github.com/nikuzuki/demo_app3.git
 git@github.com/r7kamura/retro-twitter-client.git
 git@github.com/rails/rails.git
@@ -28,7 +27,6 @@ git@github.com/spice-life/miam.git
 git@github.com/spice-life/spice-life-puppet.git
 git@github.com/spice-life/spicelife-bot.git
 git@github.com/spice-life/spicelife-web.git
-git@github.com/spice-life/spirout.git
 git@github.com/spice-life/spotlights.git
 git@github.com/spice-life/steers.git
 git@github.com/spice-life/tmix-api.git
@@ -60,7 +58,6 @@ git@github.com/unasuke/hubot-rin.git
 git@github.com/unasuke/idobata-hooks.git
 git@github.com/unasuke/idol-handshake.git
 git@github.com/unasuke/imas_api.git
-git@github.com/unasuke/jekyll.git
 git@github.com/unasuke/jekyll-test.git
 git@github.com/unasuke/kosen10slt01-my-wip-projects.git
 git@github.com/unasuke/kosen10slt01-self-introduction.git
