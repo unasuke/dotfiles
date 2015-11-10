@@ -26,6 +26,7 @@ esac
 # esac
 
 #補完的な？
+fpath=(/usr/local/share/zsh-completions $fpath)
 autoload -U compinit
 compinit -u
 
