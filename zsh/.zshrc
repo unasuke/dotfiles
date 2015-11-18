@@ -99,20 +99,6 @@ setopt complete_aliases
 #Ctrl+rで履歴から補完
 bindkey -e
 
-####################
-##alias
-
-alias la='ls -alGh'
-alias ll='ls -lGh'
-
-alias g='git'
-compdef g=git
-
-##peco
-
-#cd repository
-alias e='cd $(ghq list -p | peco)'
-
 ###################
 ##prompt
 
@@ -134,3 +120,5 @@ function peco-select-history() {
 }
 zle -N peco-select-history
 bindkey '^r' peco-select-history
+
+source ~/.zsh.d/aliases.zsh
