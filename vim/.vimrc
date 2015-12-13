@@ -44,6 +44,7 @@ NeoBundle 'tpope/vim-rails'
 NeoBundle "osyo-manga/shabadou.vim"
 NeoBundle "osyo-manga/vim-watchdogs"
 NeoBundle "othree/html5.vim"
+NeoBundle "ctrlpvim/ctrlp.vim"
 
 call neobundle#end()
 NeoBundleCheck
@@ -245,3 +246,9 @@ set ttyfast
 let g:watchdogs_check_BufWritePost_enable = 1
 
 setlocal iskeyword+=-
+
+" ctrlp.vim
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
