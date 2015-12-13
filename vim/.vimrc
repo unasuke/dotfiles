@@ -152,6 +152,7 @@ autocmd CursorMoved ControlP let w:lightline = 0
 "colorscheme setting
 set t_Co=256
 set background=dark
+let g:solarized_termtrans=1
 colorscheme solarized
 
 "convert file encode
