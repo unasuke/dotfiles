@@ -122,3 +122,7 @@ zle -N peco-select-history
 bindkey '^r' peco-select-history
 
 source ~/.zsh.d/aliases.zsh
+
+# GO PATH
+export GOPATH=$HOME
+export PATH=$PATH:/usr/local/opt/go/libexec/bin
