@@ -46,6 +46,7 @@ NeoBundle "osyo-manga/vim-watchdogs"
 NeoBundle "othree/html5.vim"
 NeoBundle "ctrlpvim/ctrlp.vim"
 NeoBundle "gkz/vim-ls"
+NeoBundle "digitaltoad/vim-jade"
 
 call neobundle#end()
 NeoBundleCheck
