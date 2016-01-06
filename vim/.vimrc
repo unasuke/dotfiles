@@ -45,6 +45,7 @@ NeoBundle "osyo-manga/shabadou.vim"
 NeoBundle "osyo-manga/vim-watchdogs"
 NeoBundle "othree/html5.vim"
 NeoBundle "ctrlpvim/ctrlp.vim"
+NeoBundle "gkz/vim-ls"
 
 call neobundle#end()
 NeoBundleCheck
