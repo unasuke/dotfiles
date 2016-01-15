@@ -23,6 +23,7 @@
   ad = add
   d = diff
   dc = diff --cached
+  fe = fetch --prune
   miku = !git stash 1> /dev/null && echo 'もうしょうがないにゃぁ、この変更はみくが覚えておくにゃ！'
 [rebase]
   autostash = true
