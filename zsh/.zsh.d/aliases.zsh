@@ -14,3 +14,6 @@ alias e='cd $(ghq list -p | peco)'
 #bundler
 alias bi='bundle install'
 alias be='bundle exec'
+
+#vim
+alias vi='vim'
