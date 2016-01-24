@@ -47,6 +47,8 @@ NeoBundle "othree/html5.vim"
 NeoBundle "ctrlpvim/ctrlp.vim"
 NeoBundle "gkz/vim-ls"
 NeoBundle "digitaltoad/vim-jade"
+NeoBundle 'mrk21/yaml-vim'
+NeoBundle 'w0ng/vim-hybrid'
 
 call neobundle#end()
 NeoBundleCheck
