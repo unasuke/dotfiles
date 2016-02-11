@@ -16,6 +16,7 @@
   sh = stash
   c = commit -v
   l = log --oneline --decorate --color --graph
+  l = log --oneline --decorate --color --graph --all
   pl = pull
   ps = push
   ch = checkout
