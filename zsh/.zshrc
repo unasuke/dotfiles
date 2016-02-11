@@ -126,3 +126,6 @@ source ~/.zsh.d/aliases.zsh
 # GO PATH
 export GOPATH=$HOME
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
+
+# direnv
+eval "$(direnv hook zsh)"
