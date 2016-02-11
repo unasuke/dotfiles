@@ -50,6 +50,7 @@ NeoBundle "digitaltoad/vim-jade"
 NeoBundle 'mrk21/yaml-vim'
 NeoBundle 'w0ng/vim-hybrid'
 NeoBundle "tmux-plugins/vim-tmux"
+NeoBundle 'kana/vim-filetype-haskell'
 
 call neobundle#end()
 NeoBundleCheck
