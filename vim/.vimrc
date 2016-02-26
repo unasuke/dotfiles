@@ -46,7 +46,7 @@ NeoBundle "osyo-manga/vim-watchdogs"
 NeoBundle "othree/html5.vim"
 NeoBundle "ctrlpvim/ctrlp.vim"
 NeoBundle "gkz/vim-ls"
-NeoBundle "digitaltoad/vim-jade"
+NeoBundle "digitaltoad/vim-pug"
 NeoBundle 'mrk21/yaml-vim'
 NeoBundle 'w0ng/vim-hybrid'
 NeoBundle "tmux-plugins/vim-tmux"
