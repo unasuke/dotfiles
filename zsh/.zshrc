@@ -11,6 +11,7 @@ darwin*)
 	#export path=/usr/local/bin:$PATH
 	#homebrew用の補完情報
 	path=(~/bin(N-/) /usr/local/bin(N-/) ${path})
+  fpath=(/usr/local/share/zsh-completions $fpath)
 	;;
 #linux
 linux*)
