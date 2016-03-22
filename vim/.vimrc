@@ -1,59 +1,52 @@
-"neobundle.vimの設定
-if has('vim_starting')
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
-endif
+set runtimepath^=~/.vim/bundle/repos/github.com/Shougo/dein.vim
 
-call neobundle#begin(expand('~/.vim/bundle/'))
-
-NeoBundleFetch 'Shougo/neobundle.vim'
-
-"install plugins
-NeoBundle 'Shougo/vimproc.vim', {
+call dein#begin(expand('~/.vim/bundle'))
+call dein#add('Shougo/dein.vim')
+call dein#add('Shougo/vimproc.vim', {
   \ 'build' : {
-  \	'windows' : 'make -f make_mingw32.mak',
-  \	'cygwin' : 'make -f make_cygwin.mak',
-  \	'mac' : 'make -f make_mac.mak',
-  \	'unix' : 'make -f make_unix.mak',
-  \	},
-  \}
+  \  	'windows' : 'tools\\update-dll-mingw',
+  \	  'cygwin'  : 'make -f make_cygwin.mak',
+  \	  'mac'     : 'make',
+  \   'linux'   : 'make',
+  \	  'unix'    : 'gmake',
+  \	  },
+  \ })
+call dein#add('Shougo/unite.vim')
+call dein#add('thinca/vim-quickrun')
+call dein#add('altercation/vim-colors-solarized')
+call dein#add('Shougo/neocomplete.vim')
+call dein#add('itchyny/lightline.vim')
+call dein#add('vim-jp/vimdoc-ja')
+call dein#add('vim-ruby/vim-ruby')
+call dein#add('wakatime/vim-wakatime')
+call dein#add('slim-template/vim-slim')
+call dein#add('scrooloose/nerdtree')
+call dein#add('Shougo/vimshell.vim')
+call dein#add('nathanaelkane/vim-indent-guides')
+call dein#add('tpope/vim-fugitive')
+call dein#add('airblade/vim-gitgutter')
+call dein#add('Shougo/vimfiler.vim')
+call dein#add('sjl/gundo.vim')
+call dein#add('kchmck/vim-coffee-script')
+call dein#add('jiangmiao/auto-pairs')
+call dein#add('haya14busa/incsearch.vim')
+call dein#add('ap/vim-css-color')
+call dein#add('tpope/vim-haml')
+call dein#add('Xuyuanp/nerdtree-git-plugin')
+call dein#add('puppetlabs/puppet-syntax-vim')
+call dein#add('tpope/vim-rails')
+call dein#add('osyo-manga/shabadou.vim')
+call dein#add('osyo-manga/vim-watchdogs')
+call dein#add('othree/html5.vim')
+call dein#add('ctrlpvim/ctrlp.vim')
+call dein#add('gkz/vim-ls')
+call dein#add('digitaltoad/vim-pug')
+call dein#add('mrk21/yaml-vim')
+call dein#add('w0ng/vim-hybrid')
+call dein#add('tmux-plugins/vim-tmux')
+call dein#add('kana/vim-filetype-haskell')
 
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'thinca/vim-quickrun'
-NeoBundle 'altercation/vim-colors-solarized'
-NeoBundle 'Shougo/neocomplete.vim'
-NeoBundle 'itchyny/lightline.vim'
-NeoBundle 'vim-jp/vimdoc-ja'
-NeoBundle 'vim-ruby/vim-ruby'
-NeoBundle 'wakatime/vim-wakatime'
-NeoBundle 'slim-template/vim-slim'
-NeoBundle 'scrooloose/nerdtree' 
-NeoBundle 'Shougo/vimshell.vim'
-NeoBundle 'nathanaelkane/vim-indent-guides'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'airblade/vim-gitgutter'
-NeoBundle 'Shougo/vimfiler.vim'
-NeoBundle 'sjl/gundo.vim'
-NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'jiangmiao/auto-pairs'
-NeoBundle 'haya14busa/incsearch.vim'
-NeoBundle 'ap/vim-css-color'
-NeoBundle 'tpope/vim-haml'
-NeoBundle 'Xuyuanp/nerdtree-git-plugin'
-NeoBundle 'puppetlabs/puppet-syntax-vim'
-NeoBundle 'tpope/vim-rails'
-NeoBundle "osyo-manga/shabadou.vim"
-NeoBundle "osyo-manga/vim-watchdogs"
-NeoBundle "othree/html5.vim"
-NeoBundle "ctrlpvim/ctrlp.vim"
-NeoBundle "gkz/vim-ls"
-NeoBundle "digitaltoad/vim-pug"
-NeoBundle 'mrk21/yaml-vim'
-NeoBundle 'w0ng/vim-hybrid'
-NeoBundle "tmux-plugins/vim-tmux"
-NeoBundle 'kana/vim-filetype-haskell'
-
-call neobundle#end()
-NeoBundleCheck
+call dein#end()
 
 "help language use Japanese
 set helplang=ja,en
@@ -260,3 +253,8 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+
+" check not install plugin
+if dein#check_install()
+  call dein#install()
+endif
