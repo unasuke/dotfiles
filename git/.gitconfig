@@ -3,6 +3,7 @@
 [user]
   name = Yusuke Nakamura
   email = yusuke1994525@gmail.com
+  signingkey = 153BB95D
 [push]
   default = simple
 [core]
@@ -32,3 +33,5 @@
   showPatch = true
 [diff]
   algorithm = patience
+[gpg]
+  program = gpg2
