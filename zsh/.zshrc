@@ -130,3 +130,6 @@ export PATH=$PATH:/usr/local/opt/go/libexec/bin
 
 # direnv
 eval "$(direnv hook zsh)"
+
+# nodebrew
+export PATH=$HOME/.nodebrew/current/bin:$PATH
