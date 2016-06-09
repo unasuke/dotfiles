@@ -28,6 +28,14 @@
   fe = fetch --prune
   me = merge
   miku = !git stash 1> /dev/null && echo 'もうしょうがないにゃぁ、この変更はみくが覚えておくにゃ！'
+  g = grep
+  branches = branch -a
+  tags = tag
+  stashes = stash list
+  unstage = reset -q HEAD --
+  discard = checkout --
+  uncommit = reset --mixed HEAD~
+  amend = commit --amend
 [rebase]
   autostash = true
 [stash]
