@@ -26,6 +26,9 @@ darwin*)
   [ -f ${envfile} ] && source ${envfile}
   export GPG_AGENT_INFO
   export GPG_TTY=`tty`
+
+  #git pretty diff
+  export PATH=$PATH:/usr/local/share/git-core/contrib/diff-highlight
 	;;
 #linux
 linux*)

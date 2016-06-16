@@ -37,12 +37,19 @@
   unstage = reset -q HEAD --
   discard = checkout --
   uncommit = reset --mixed HEAD~
-  amend = commit --amend
+  amend = commit --amend -v
 [rebase]
   autostash = true
 [stash]
   showPatch = true
 [diff]
   algorithm = patience
+  compactionHeuristic = true
 [gpg]
   program = gpg2
+[pager]
+  log = diff-highlight | less
+  show = diff-highlight | less
+  diff = diff-highlight | less
+[interactive]
+  diffFilter = diff-highlight
