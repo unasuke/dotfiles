@@ -247,3 +247,6 @@ let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclu
 if dein#check_install()
   call dein#install()
 endif
+
+" ambigous character
+set ambiwidth=double
