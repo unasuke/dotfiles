@@ -37,6 +37,7 @@ call dein#add('mrk21/yaml-vim')
 call dein#add('w0ng/vim-hybrid')
 call dein#add('tmux-plugins/vim-tmux')
 call dein#add('kana/vim-filetype-haskell')
+call dein#add('evanmiller/nginx-vim-syntax')
 
 call dein#end()
 
