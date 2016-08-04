@@ -27,7 +27,7 @@
   ad = add
   d = diff
   dc = diff --cached
-  fe = fetch --prune
+  fe = fetch --prune --all
   me = merge
   miku = !git stash 1> /dev/null && echo 'もうしょうがないにゃぁ、この変更はみくが覚えておくにゃ！'
   g = grep
