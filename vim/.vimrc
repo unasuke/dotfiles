@@ -252,3 +252,6 @@ endif
 
 " ambigous character
 set ambiwidth=double
+
+" command completion
+set wildmode=list:full
