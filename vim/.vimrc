@@ -67,6 +67,7 @@ set tabstop=2
 set softtabstop=2
 set autoindent
 set smartindent
+set breakindent
 
 "no more swapfile
 set noswapfile
