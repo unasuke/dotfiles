@@ -17,3 +17,6 @@ alias be='bundle exec'
 
 #vim
 alias vi='vim'
+
+#docker
+alias dc='docker-compose'
