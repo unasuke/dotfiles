@@ -255,3 +255,5 @@ set ambiwidth=double
 
 " command completion
 set wildmode=list:full
+
+nnoremap <silent><Esc><Esc> :<C-u>set nohlsearch!<CR>
