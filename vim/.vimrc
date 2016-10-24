@@ -1,3 +1,6 @@
+set encoding=UTF-8
+scriptencoding UTF-8
+
 set runtimepath^=~/.vim/bundle/repos/github.com/Shougo/dein.vim
 
 call dein#begin(expand('~/.vim/bundle'))
@@ -49,9 +52,6 @@ set notitle
 
 "Ricty(only gvim?)
 set guifont=Ricty:h16
-
-"use UTF-8
-set encoding=UTF-8
 
 "syntax
 syntax on
