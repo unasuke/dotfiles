@@ -66,3 +66,6 @@ $RECYCLE.BIN/
 
 # direnv
 .envrc
+
+# ctags
+tags
