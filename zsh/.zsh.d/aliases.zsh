@@ -1,8 +1,4 @@
 #alias
-#ls
-alias la='ls -alGh'
-alias ll='ls -lGh'
-
 #git
 alias g='git'
 compdef g=git
