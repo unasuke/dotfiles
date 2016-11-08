@@ -117,7 +117,7 @@ setopt correct
 setopt complete_aliases
 
 #Ctrl+rで履歴から補完
-bindkey -e
+#bindkey -e
 
 ###################
 ##prompt
