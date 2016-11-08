@@ -7,3 +7,5 @@ bindkey '^r' peco-select-history
 
 alias ll='ls --color=auto -lh'
 alias la='ls --color=auto -alh'
+
+xmodmap ~/.Xmodmap
