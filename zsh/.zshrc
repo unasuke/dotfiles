@@ -4,6 +4,9 @@ export LANG=ja_JP.UTF-8
 #vim
 export EDITOR=vim
 
+# emacs bind(before to peco)
+bindkey -e
+
 #OS別の設定
 case "${OSTYPE}" in
 #Mac
@@ -115,9 +118,6 @@ setopt correct
 
 #aliasも展開して補完
 setopt complete_aliases
-
-#Ctrl+rで履歴から補完
-#bindkey -e
 
 ###################
 ##prompt
