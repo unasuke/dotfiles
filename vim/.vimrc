@@ -143,12 +143,6 @@ endfunction
 let g:vimshell_force_overwrite_statusline= 0
 autocmd CursorMoved ControlP let w:lightline = 0
 
-"colorscheme setting
-set t_Co=256
-set background=dark
-let g:solarized_termtrans=1
-colorscheme solarized
-
 "convert file encode
 function! SetUU()
   set ff=unix
@@ -257,3 +251,9 @@ set ambiwidth=double
 set wildmode=list:full
 
 nnoremap <silent><Esc><Esc> :<C-u>set nohlsearch!<CR>
+
+"colorscheme setting
+set t_Co=256
+set background=dark
+let g:solarized_termtrans=1
+colorscheme solarized
