@@ -37,7 +37,7 @@
   unstage = reset -q HEAD --
   discard = checkout --
   uncommit = reset --mixed HEAD~
-  amend = commit --amend -v
+  amend = commit --amend -v -S
 [rebase]
   autostash = true
 [stash]
