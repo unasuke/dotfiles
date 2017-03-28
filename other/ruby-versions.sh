@@ -1,8 +1,6 @@
-rbenv install 2.1.5 &
-rbenv install 2.1.6 &
-rbenv install 2.2.0 &
-rbenv install 2.2.1 &
-rbenv install 2.2.2 &
-rbenv install 2.2.3 &
+rbenv install 2.2.7 &
+rbenv install 2.3.3 &
+rbenv install 2.4.1 &
+rbenv install 2.5.0-dev &
 
 wait
