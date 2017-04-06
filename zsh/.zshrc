@@ -169,7 +169,7 @@ source ~/.zsh.d/aliases.zsh
 
 # GO PATH
 export GOPATH=$HOME
-export PATH=$PATH:/usr/local/opt/go/libexec/bin
+export PATH=$PATH:$GOPATH/bin
 
 # direnv
 eval "$(direnv hook zsh)"
