@@ -46,7 +46,7 @@
   algorithm = patience
   compactionHeuristic = true
 [gpg]
-  program = gpg2
+  program = gpg
 [pager]
   log = diff-highlight | less
   show = diff-highlight | less
