@@ -5,3 +5,4 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 let g:NERDTreeQuitOnOpen=1
 let g:NERDTreeShowHidden=1
+let g:NERDTreeWinSize=40
