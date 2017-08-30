@@ -206,7 +206,7 @@ set virtualedit+=block
 
 "set updatetime=10
 
-let g:gitgutter_sign_column_always = 1
+set signcolumn=yes
 
 let g:NERDTreeIndicatorMapCustom = {
     \ "Modified"  : "*",
