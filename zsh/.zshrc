@@ -29,6 +29,10 @@ darwin*)
 linux*)
 	path=(/usr/local/bin(N-/) $path)
   source ~/.zsh.d/linux.zsh
+	;;
+# windows (msys2)
+msys*)
+  source ~/.zsh.d/msys.zsh
 esac
 
 # case "${TERM}" in
