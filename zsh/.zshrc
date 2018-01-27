@@ -1,9 +1,3 @@
-#環境変数を日本語に
-export LANG=ja_JP.UTF-8
-
-#vim
-export EDITOR=vim
-
 # emacs bind(before to peco)
 bindkey -e
 
@@ -156,18 +150,10 @@ function _update_prompt() {
 }
 add-zsh-hook precmd _update_prompt
 
-##rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
 source ~/.zsh.d/aliases.zsh
 
-# GO PATH
-export GOPATH=$HOME
-export PATH=$PATH:$GOPATH/bin
-
 # direnv
 eval "$(direnv hook zsh)"
 
-# nodebrew
-export PATH=$HOME/.nodebrew/current/bin:$PATH
