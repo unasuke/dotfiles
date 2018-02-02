@@ -8,4 +8,6 @@ bindkey '^r' peco-select-history
 alias ll='ls --color=auto -lh'
 alias la='ls --color=auto -alh'
 
-xmodmap ~/.Xmodmap
+if [[ -f $HOME/.Xresources ]]; then
+  xrdb -merge $HOME/.Xresources
+fi

@@ -23,6 +23,13 @@ darwin*)
 linux*)
 	path=(/usr/local/bin(N-/) $path)
   source ~/.zsh.d/linux.zsh
+  if [[ -f $HOME/.Xresources ]]; then
+    xrdb -merge $HOME/.Xresources
+  fi
+
+  if [[ -f $HOME/.xkb/custom.xkb ]]; then
+    xkbcomp ~/.xkb/custom.xkb $DISPLAY
+  fi
 	;;
 # windows (msys2)
 msys*)
