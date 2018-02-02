@@ -99,7 +99,7 @@ setopt auto_menu
 setopt extended_glob
 
 #auto cd
-setopt auto_cd
+#setopt auto_cd
 setopt auto_pushd
 
 #誤り訂正
