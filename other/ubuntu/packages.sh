@@ -12,6 +12,5 @@ sudo apt install -y vim-nox \
                     xsel  \
                     direnv  \
                     tig \
-                    wine  \
                     libmagickwand-dev \
                     libmagic-dev
