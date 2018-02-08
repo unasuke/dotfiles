@@ -146,9 +146,19 @@ function _update_vcs_info_msg() {
 }
 add-zsh-hook precmd _update_vcs_info_msg
 
+local -a gcloud_prompt
+function _update_gcloud_project() {
+  if [[ -f '.gcloud' ]]; then
+    gcloud_prompt=`gcloud config get-value project`
+  else
+    gcloud_prompt=""
+  fi
+}
+add-zsh-hook precmd _update_gcloud_project
+
 function _update_prompt() {
   #current directory path
-  local p_cdir=$'\n'"%F{blue}[%~]%f""$vcs_prompt"$'\n'
+  local p_cdir=$'\n'"%F{blue}[%~]%f""$vcs_prompt""%F{white}$gcloud_prompt%f"$'\n'
 
   #username and hostname
   local p_info="%n@%m"
