@@ -19,3 +19,7 @@ alias dc='docker-compose'
 
 #kubernetes
 alias ku='kubectl'
+
+#clipboard(linux) (clipboard copy/paste)
+alias clc='xsel -bi'
+alias clp='xsel -bo'
