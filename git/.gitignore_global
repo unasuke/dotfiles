@@ -69,3 +69,6 @@ $RECYCLE.BIN/
 
 # ctags
 tags
+
+# idea
+.idea/
