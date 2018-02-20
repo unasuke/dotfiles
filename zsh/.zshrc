@@ -177,3 +177,7 @@ eval "$(direnv hook zsh)"
 if [[ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
   source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
+
+if [[ $(which kubectl) ]]; then
+  source <(kubectl completion zsh)
+fi
