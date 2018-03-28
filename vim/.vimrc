@@ -184,7 +184,13 @@ nnoremap <silent> <Space>t :tabedit<CR>
 
 nmap ; :
 
-set clipboard=unnamedplus
+if has("unix")
+  set clipboard&
+  set clipboard^=unnamedplus
+else
+  set clipboard&
+  set clipboard=^unnamed,autoselect
+endif
 
 "incsearch
 set incsearch
