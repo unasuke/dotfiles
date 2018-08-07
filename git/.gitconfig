@@ -30,7 +30,7 @@
   fe = fetch --prune --all
   me = merge
   miku = !git stash 1> /dev/null && echo 'もうしょうがないにゃぁ、この変更はみくが覚えておくにゃ！'
-  g = grep
+  g = grep --line-number
   branches = branch -a
   tags = tag
   stashes = stash list
