@@ -11,3 +11,8 @@ alias la='ls --color=auto -alh'
 if [[ -f $HOME/.Xresources ]]; then
   xrdb -merge $HOME/.Xresources
 fi
+
+
+if [[ -f $HOME/share/google-cloud-sdk/completion.zsh.inc ]]; then
+  source $HOME/share/google-cloud-sdk/completion.zsh.inc
+fi
