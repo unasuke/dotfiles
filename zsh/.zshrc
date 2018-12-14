@@ -148,11 +148,12 @@ add-zsh-hook precmd _update_vcs_info_msg
 
 local -a gcloud_prompt
 function _update_gcloud_project() {
-  if [[ -f '.gcloud' ]]; then
-    gcloud_prompt=`grep 'project' ~/.config/gcloud/configurations/config_default | awk '{print $3}'`
-  else
-    gcloud_prompt=""
-  fi
+  gcloud_prompt=`grep 'project' ~/.config/gcloud/configurations/config_default | awk '{print $3}'`
+  #if [[ -f '.gcloud' ]]; then
+  #  gcloud_prompt=`grep 'project' ~/.config/gcloud/configurations/config_default | awk '{print $3}'`
+  #else
+  #  gcloud_prompt=""
+  #fi
 }
 add-zsh-hook precmd _update_gcloud_project
 
