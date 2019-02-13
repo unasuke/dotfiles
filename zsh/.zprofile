@@ -6,9 +6,6 @@ if [[ -f $HOME/.xkb/custom.xkb ]]; then
   xkbcomp ~/.xkb/custom.xkb $DISPLAY
 fi
 
-# Ubuntu make installation of Ubuntu Make binary symlink
-PATH=/home/unasuke/.local/share/umake/bin:$PATH
-
 if [[ $(which kubectl) ]]; then
   source <(kubectl completion zsh)
 fi
