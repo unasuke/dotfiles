@@ -148,7 +148,9 @@ add-zsh-hook precmd _update_vcs_info_msg
 
 local -a gcloud_prompt
 function _update_gcloud_project() {
-  gcloud_prompt=`grep 'project' ~/.config/gcloud/configurations/config_default | awk '{print $3}'`
+  if command -v gcloud 1>/dev/null 2>&1; then
+    gcloud_prompt=`grep 'project' ~/.config/gcloud/configurations/config_default | awk '{print $3}'`
+  fi
   #if [[ -f '.gcloud' ]]; then
   #  gcloud_prompt=`grep 'project' ~/.config/gcloud/configurations/config_default | awk '{print $3}'`
   #else
@@ -168,7 +170,9 @@ function _update_prompt() {
 }
 add-zsh-hook precmd _update_prompt
 
-eval "$(rbenv init -)"
+if command -v rbenv 1>/dev/null 2>&1; then
+  eval "$(rbenv init -)"
+fi
 
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
@@ -177,12 +181,14 @@ fi
 source ~/.zsh.d/aliases.zsh
 
 # direnv
-eval "$(direnv hook zsh)"
+if command -v direnv 1>/dev/null 2>&1; then
+  eval "$(direnv hook zsh)"
+fi
 
 if [[ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
   source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
 
-if [[ $(which kubectl) ]]; then
+if command -v kubectl 1>/dev/null 2>&1; then
   source <(kubectl completion zsh)
 fi
