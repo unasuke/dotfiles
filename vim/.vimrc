@@ -147,7 +147,7 @@ command -nargs=0 SetUU call SetUU()
 set backspace=indent,eol,start
 
 "Neocomplete
-source ~/.neocomplete.vim
+"source ~/.neocomplete.vim
 
 "NerdTree
 source ~/.nerdtree.vim
