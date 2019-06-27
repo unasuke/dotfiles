@@ -32,6 +32,7 @@ call dein#add('tpope/vim-rails')
 call dein#add('vim-jp/vimdoc-ja')
 "call dein#add('vim-ruby/vim-ruby')
 call dein#add('w0ng/vim-hybrid')
+call dein#add('w0rp/ale')
 call dein#add('wakatime/vim-wakatime')
 call dein#add('Xuyuanp/nerdtree-git-plugin')
 
