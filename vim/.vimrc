@@ -18,6 +18,8 @@ call dein#add('nathanaelkane/vim-indent-guides')
 call dein#add('osyo-manga/shabadou.vim')
 call dein#add('othree/html5.vim')
 call dein#add('othree/yajs.vim')
+call dein#add('prabirshrestha/async.vim')
+call dein#add('prabirshrestha/vim-lsp')
 "call dein#add('pocke/iro.vim')
 call dein#add('scrooloose/nerdtree')
 call dein#add('Shougo/dein.vim')
@@ -257,3 +259,27 @@ set t_Co=256
 set background=dark
 let g:solarized_termtrans=1
 colorscheme solarized
+
+if executable('solargraph')
+    " gem install solargraph
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'solargraph',
+        \ 'cmd': {server_info->[&shell, &shellcmdflag, 'solargraph stdio']},
+        \ 'initialization_options': {"diagnostics": "true"},
+        \ 'whitelist': ['ruby'],
+        \ })
+endif
+
+if executable('gopls')
+  augroup LspGo
+    au!
+    autocmd User lsp_setup call lsp#register_server({
+        \ 'name': 'go-lang',
+        \ 'cmd': {server_info->['gopls', '-mode', 'stdio']},
+        \ 'whitelist': ['go'],
+        \ })
+    autocmd FileType go setlocal omnifunc=lsp#complete
+  augroup END
+endif
+
+let g:lsp_diagnostics_enabled = 0
