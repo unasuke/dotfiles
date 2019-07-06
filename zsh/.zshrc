@@ -24,11 +24,11 @@ linux*)
 	path=(/usr/local/bin(N-/) $path)
   source ~/.zsh.d/linux.zsh
   if [[ -f $HOME/.Xresources ]]; then
-    xrdb -merge $HOME/.Xresources
+    xrdb -merge $HOME/.Xresources 1>/dev/null 2>&1
   fi
 
   if [[ -f $HOME/.xkb/custom.xkb ]]; then
-    xkbcomp ~/.xkb/custom.xkb $DISPLAY
+    xkbcomp ~/.xkb/custom.xkb $DISPLAY1 >/dev/null 2>&1
   fi
 	;;
 # windows (msys2)
