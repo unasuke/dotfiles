@@ -171,12 +171,16 @@ function _update_prompt() {
 }
 add-zsh-hook precmd _update_prompt
 
-if command -v rbenv 1>/dev/null 2>&1; then
-  eval "$(rbenv init -)"
-fi
+# if command -v rbenv 1>/dev/null 2>&1; then
+#   eval "$(rbenv init -)"
+# fi
+#
+# if command -v pyenv 1>/dev/null 2>&1; then
+#   eval "$(pyenv init -)"
+# fi
 
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
+if command -v anyenv 1>/dev/null 2>&1; then
+  eval "$(anyenv init -)"
 fi
 
 if command -v nodenv 1>/dev/null 2>&1; then
