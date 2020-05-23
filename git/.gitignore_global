@@ -488,3 +488,7 @@ $RECYCLE.BIN/
 tags
 
 .gcloud
+
+.vscode
+
+.idea
