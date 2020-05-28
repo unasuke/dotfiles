@@ -285,4 +285,5 @@ if executable('gopls')
   augroup END
 endif
 
-let g:lsp_diagnostics_enabled = 0
+let g:lsp_diagnostics_enabled = 1
+let g:lsp_signs_enabled = 1
