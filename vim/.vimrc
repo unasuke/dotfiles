@@ -177,7 +177,10 @@ nnoremap <silent> <Space>t :tabedit<CR>
 
 nmap ; :
 
-if has("unix")
+if has("mac")
+  set clipboard&
+  set clipboard+=unnamed
+elseif has("unix")
   set clipboard&
   set clipboard^=unnamedplus
 else
