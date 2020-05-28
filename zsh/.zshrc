@@ -10,10 +10,10 @@ darwin*)
 	path=(~/bin(N-/) /usr/local/bin(N-/) ${path})
   fpath=(/usr/local/share/zsh-completions $fpath)
 
-  export GPG_AGENT_INFO  # the env file does not contain the export statement
-  export SSH_AUTH_SOCK   # enable gpg-agent for ssh
-  export GPG_TTY=`tty`
-  pgrep -q gpg-agent || eval $(gpg-agent --quiet --daemon --enable-ssh-support)
+  # export GPG_AGENT_INFO  # the env file does not contain the export statement
+  # export SSH_AUTH_SOCK   # enable gpg-agent for ssh
+  # export GPG_TTY=`tty`
+  # pgrep -q gpg-agent || eval $(gpg-agent --quiet --daemon --enable-ssh-support)
 
   #git pretty diff
   export PATH=$PATH:/usr/local/share/git-core/contrib/diff-highlight
