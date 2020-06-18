@@ -1,2 +1,4 @@
 set clipboard=unnamed
 set incsearch
+set visualbell
+set noerrorbells
