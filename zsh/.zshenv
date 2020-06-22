@@ -1,3 +1,5 @@
+typeset -gU PATH
+
 export LANG=ja_JP.UTF-8
 export EDITOR=vim
 # export PATH=$HOME/.rbenv/bin:$PATH
