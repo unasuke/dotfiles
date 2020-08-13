@@ -5,7 +5,7 @@ set runtimepath^=~/.vim/bundle/repos/github.com/Shougo/dein.vim
 
 call dein#begin(expand('~/.vim/bundle'))
 call dein#add('airblade/vim-gitgutter')
-call dein#add('altercation/vim-colors-solarized')
+"call dein#add('altercation/vim-colors-solarized')
 call dein#add('ap/vim-css-color')
 call dein#add('chr4/nginx.vim')
 call dein#add('ctrlpvim/ctrlp.vim')
@@ -13,6 +13,7 @@ call dein#add('fatih/vim-go')
 call dein#add('haya14busa/incsearch.vim')
 call dein#add('itchyny/lightline.vim')
 call dein#add('jiangmiao/auto-pairs')
+call dein#add('lifepillar/vim-solarized8')
 call dein#add('mrk21/yaml-vim')
 call dein#add('nathanaelkane/vim-indent-guides')
 call dein#add('osyo-manga/shabadou.vim')
@@ -262,7 +263,7 @@ nnoremap <silent><Esc><Esc> :<C-u>set nohlsearch!<CR>
 set t_Co=256
 set background=dark
 let g:solarized_termtrans=1
-colorscheme solarized
+colorscheme solarized8_high
 
 if executable('solargraph')
     " gem install solargraph
