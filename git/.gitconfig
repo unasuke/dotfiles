@@ -66,3 +66,5 @@
   user = unasuke
 [init]
   defaultBranch = main
+[pull]
+  ff = only
