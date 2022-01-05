@@ -64,3 +64,5 @@
 #   fetch = +refs/pull/*:refs/remotes/pr/*
 [github]
   user = unasuke
+[init]
+  defaultBranch = main
