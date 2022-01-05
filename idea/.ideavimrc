@@ -1,4 +1,7 @@
-set clipboard=unnamed
+set clipboard+=unnamed
 set incsearch
 set visualbell
 set noerrorbells
+set clipboard+=ideaput
+set display=lastline
+set laststatus=2
