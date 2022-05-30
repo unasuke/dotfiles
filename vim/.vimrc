@@ -75,7 +75,7 @@ set laststatus=2
 let g:lightline = {
   \ 'colorscheme' : 'solarized' ,
   \ 'active' : {
-  \   'left' : [['mode', 'paste'], ['fugitive', 'filename', 'modified']]
+  \   'left' : [['mode', 'paste'], ['filename', 'modified']]
   \ },
   \ 'component_function' : {
   \   'modified' : 'LightLineModified',
