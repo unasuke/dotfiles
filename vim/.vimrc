@@ -1,6 +1,17 @@
 set encoding=UTF-8
 scriptencoding UTF-8
 
+
+" curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+call plug#begin()
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'itchyny/lightline.vim'
+Plug 'lifepillar/vim-solarized8'
+Plug 'lambdalisue/fern.vim'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'wakatime/vim-wakatime'
+call plug#end()
+
 syntax on
 filetype plugin indent on
 set helplang=ja,en
@@ -154,4 +165,17 @@ set t_Co=256
 set background=dark
 let g:solarized_termtrans=1
 colorscheme solarized8_high
+
+" fern
+let g:fern#default_hidden=1
+nmap <silent> <space>e :Fern . -drawer -toggle<CR>
+
+function! s:init_fern() abort
+  setlocal nonumber
+endfunction
+
+augroup fern-custom
+  autocmd! *
+  autocmd FileType fern call s:init_fern()
+augroup end
 
