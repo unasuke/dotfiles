@@ -2,11 +2,11 @@ typeset -gU PATH
 
 export LANG=ja_JP.UTF-8
 export EDITOR=vim
-export PATH=$HOME/.rbenv/bin:$PATH
-export PATH=$HOME/.cargo/bin:$PATH
-export PATH=$HOME/.nodenv/bin:$PATH
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
+# export PATH=$HOME/.rbenv/bin:$PATH
+# export PATH=$HOME/.cargo/bin:$PATH
+# export PATH=$HOME/.nodenv/bin:$PATH
+# export PYENV_ROOT="$HOME/.pyenv"
+# export PATH="$PYENV_ROOT/bin:$PATH"
 export PATH=$HOME/.tfenv/bin:$PATH
 export GOPATH=$HOME
 export PATH=$GOPATH/bin:$PATH
@@ -19,3 +19,7 @@ fi
 if [[ $(which yarn > /dev/null 2>&1) ]]; then
   export PATH=$(yarn global bin):$PATH
 fi
+
+source "$HOME/.asdf/asdf.sh"
+fpath=(${ASDF_DIR}/completions $fpath)
+autoload -Uz compinit && compinit
