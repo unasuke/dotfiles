@@ -15,7 +15,7 @@ alias be='bundle exec'
 alias vi='vim'
 
 #docker
-alias dc='docker-compose'
+alias dc='docker compose'
 
 #kubernetes
 alias ku='kubectl'
