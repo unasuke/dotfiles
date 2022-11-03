@@ -48,11 +48,11 @@
 [gpg]
   program = gpg
 [pager]
-  log = diff-highlight | less
-  show = diff-highlight | less
-  diff = diff-highlight | less
+  log = delta --color-only
+  show = delta --color-only
+  diff = delta --color-only
 [interactive]
-  diffFilter = diff-highlight
+  diffFilter = delta --color-only
 [commit]
   verbose = true
 [filter "lfs"]
@@ -68,3 +68,5 @@
   defaultBranch = main
 [pull]
   ff = only
+[delta]
+  line-numbers = true
