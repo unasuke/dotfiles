@@ -8,8 +8,10 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'itchyny/lightline.vim'
 Plug 'lifepillar/vim-solarized8'
 Plug 'lambdalisue/fern.vim'
+Plug 'lambdalisue/fern-git-status.vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'wakatime/vim-wakatime'
+Plug 'airblade/vim-gitgutter'
 call plug#end()
 
 syntax on
