@@ -1,5 +1,5 @@
 all:
-	stow -t ~/ -v git tmux vim zsh tig ruby peco idea
+	stow -t ~/ -v git tmux vim zsh tig ruby peco idea asdf
 
 linux:
 	stow -t ~/ -v X
