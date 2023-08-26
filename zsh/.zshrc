@@ -5,11 +5,6 @@ bindkey -e
 case "${OSTYPE}" in
 #Mac
 darwin*)
-	#export path=/usr/local/bin:$PATH
-	#homebrew用の補完情報
-	path=(~/bin(N-/) /usr/local/bin(N-/) ${path})
-  fpath=(/usr/local/share/zsh-completions $fpath)
-
   # export GPG_AGENT_INFO  # the env file does not contain the export statement
   # export SSH_AUTH_SOCK   # enable gpg-agent for ssh
   # export GPG_TTY=`tty`

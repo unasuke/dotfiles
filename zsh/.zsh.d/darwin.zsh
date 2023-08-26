@@ -1,3 +1,13 @@
+# homebrew
+export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
+if type brew &>/dev/null
+then
+  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
+  autoload -Uz compinit
+  compinit
+fi
+
 function peco-select-history() {
   BUFFER=$(history -n 1 | tail -r | peco --query "${LBUFFER}")
   CURSOR=${#BUFFER}
