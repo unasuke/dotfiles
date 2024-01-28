@@ -19,9 +19,6 @@ bindkey '^r' peco-select-history
 alias la='ls -alGh'
 alias ll='ls -lGh'
 
-export PATH="/opt/confluent-6.1.0/bin:$PATH"
-export PATH="/opt/apache-maven-3.8.1/bin:$PATH"
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-15.0.1.jdk/Contents/Home
 #
 # https://qiita.com/hayamiz/items/d64730b61b7918fbb970
 autoload -U add-zsh-hook 2>/dev/null || return
