@@ -1,3 +1,7 @@
+if [[ -f $HOME/.profile ]]; then
+  source $HOME/.profile
+fi
+
 if [[ -f $HOME/.Xresources ]]; then
   xrdb -merge $HOME/.Xresources
 fi
