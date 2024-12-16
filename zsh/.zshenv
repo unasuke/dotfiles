@@ -2,7 +2,7 @@ typeset -gU PATH
 
 export LANG=ja_JP.UTF-8
 export EDITOR=vim
-# export PATH=$HOME/.rbenv/bin:$PATH
+export PATH=$HOME/.rbenv/bin:$PATH
 # export PATH=$HOME/.cargo/bin:$PATH
 # export PATH=$HOME/.nodenv/bin:$PATH
 # export PYENV_ROOT="$HOME/.pyenv"
