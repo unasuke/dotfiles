@@ -20,6 +20,3 @@ if [[ $(which yarn > /dev/null 2>&1) ]]; then
   export PATH=$(yarn global bin):$PATH
 fi
 
-source "$HOME/.asdf/asdf.sh"
-fpath=(${ASDF_DIR}/completions $fpath)
-autoload -Uz compinit && compinit

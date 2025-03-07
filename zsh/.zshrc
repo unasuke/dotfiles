@@ -166,7 +166,10 @@ function _update_prompt() {
 }
 add-zsh-hook precmd _update_prompt
 
-. "$HOME/.asdf/asdf.sh"
+if [[ -f ~/.local/bin/mise ]]; then
+  eval "$(~/.local/bin/mise activate zsh)"
+fi
+
 source ~/.zsh.d/aliases.zsh
 
 # direnv

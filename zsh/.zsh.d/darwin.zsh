@@ -3,6 +3,8 @@ export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
 if type brew &>/dev/null
 then
   FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+  FPATH="$(brew --prefix)/share/zsh-completions:${FPATH}"
+  FPATH="~/.local/share/zsh/site-functions:${FPATH}"
 
   autoload -Uz compinit
   compinit
