@@ -43,8 +43,9 @@ esac
 fpath=(/usr/local/share/zsh-completions $fpath)
 fpath=(/usr/local/share/zsh $fpath)
 fpath=(~/.rbenv/completions $fpath)
-autoload -U compinit
-compinit -u
+
+autoload bashcompinit && bashcompinit
+autoload -Uz compinit compinit
 
 #補完時に英大文字と小文字を無視する
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
@@ -222,4 +223,9 @@ fi
 
 if [[ $(which stern > /dev/null) ]]; then
   source <(stern --completion=zsh)
+fi
+
+# https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-completion.html
+if which aws_completer > /dev/null; then
+  complete -C "$(which aws_completer)" aws
 fi
