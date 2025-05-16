@@ -159,12 +159,13 @@ add-zsh-hook precmd _update_gcloud_project
 
 function _update_prompt() {
   #current directory path
-  local p_cdir=$'\n'"%F{blue}[%~]%f""$vcs_prompt""%F{white}$gcloud_prompt%f"$'\n'
+  local p_cdir="%F{blue}[%~]%f""$vcs_prompt""%F{white}$gcloud_prompt%f"$'\n'
 
   #username and hostname
-  local p_info="%n@%m"
+  local p_info=$'\n'"[%n@%m]"
 
-  PROMPT=" $p_cdir$p_info %# "
+  # PROMPT=" $p_cdir$p_info %# "
+  PROMPT=" $p_info$p_cdir%# "
 }
 add-zsh-hook precmd _update_prompt
 
