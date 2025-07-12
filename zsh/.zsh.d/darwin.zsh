@@ -1,3 +1,5 @@
+export PATH=$PATH:/usr/local/share/git-core/contrib/diff-highlight
+
 # homebrew
 export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
 if type brew &>/dev/null

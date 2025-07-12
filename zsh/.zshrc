@@ -5,26 +5,11 @@ bindkey -e
 case "${OSTYPE}" in
 #Mac
 darwin*)
-  # export GPG_AGENT_INFO  # the env file does not contain the export statement
-  # export SSH_AUTH_SOCK   # enable gpg-agent for ssh
-  # export GPG_TTY=`tty`
-  # pgrep -q gpg-agent || eval $(gpg-agent --quiet --daemon --enable-ssh-support)
-
-  #git pretty diff
-  export PATH=$PATH:/usr/local/share/git-core/contrib/diff-highlight
   source ~/.zsh.d/darwin.zsh
 	;;
 #linux
 linux*)
-	path=(/usr/local/bin(N-/) $path)
   source ~/.zsh.d/linux.zsh
-  if [[ -f $HOME/.Xresources ]]; then
-    xrdb -merge $HOME/.Xresources 1>/dev/null 2>&1
-  fi
-
-  if [[ -f $HOME/.xkb/custom.xkb ]]; then
-    xkbcomp ~/.xkb/custom.xkb $DISPLAY1 >/dev/null 2>&1
-  fi
 	;;
 # windows (msys2)
 msys*)
