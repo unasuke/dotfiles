@@ -131,8 +131,6 @@ if [[ -f ~/.extrarc ]]; then
   source ~/.extrarc
 fi
 
-eval "$(/home/unasuke/.local/bin/mise activate zsh)"
-
 if [[ -f $HOME/.profile ]]; then
   source $HOME/.profile
 fi
