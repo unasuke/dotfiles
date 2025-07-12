@@ -171,6 +171,8 @@ add-zsh-hook precmd _update_prompt
 
 if [[ -f ~/.local/bin/mise ]]; then
   eval "$(~/.local/bin/mise activate zsh)"
+  # https://mise.jdx.dev/cli/completion.html
+  # mise completion zsh  > /usr/local/share/zsh/site-functions/_mise
 fi
 
 source ~/.zsh.d/aliases.zsh
