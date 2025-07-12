@@ -42,10 +42,6 @@ zstyle ':completion:*' ignore-parents parent pwd ..
 zstyle 'completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin \
 	/usr/sbin /usr/bin /sbin /bin /usr/X11R6/bin
 
-if [ -f ~/.zsh_profile ]; then
-	. ~/.zsh_profile
-fi
-
 # ヒストリの設定
 HISTFILE=~/.zsh_history
 HISTSIZE=1000000
