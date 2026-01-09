@@ -12,6 +12,9 @@ Plug 'lambdalisue/fern-git-status.vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'wakatime/vim-wakatime'
 Plug 'airblade/vim-gitgutter'
+Plug 'vim-ruby/vim-ruby'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'hashivim/vim-terraform'
 call plug#end()
 
 syntax on
