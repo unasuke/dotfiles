@@ -30,7 +30,7 @@ fpath=(/usr/local/share/zsh $fpath)
 fpath=(~/.rbenv/completions $fpath)
 
 autoload bashcompinit && bashcompinit
-autoload -Uz compinit compinit
+autoload -Uz compinit && compinit
 
 #補完時に英大文字と小文字を無視する
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
