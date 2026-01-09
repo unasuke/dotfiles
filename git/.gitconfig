@@ -44,17 +44,19 @@
   autostash = true
 [stash]
   showPatch = true
-[diff]
-  algorithm = patience
-  compactionHeuristic = true
+[difftool]
+  prompt = false
+[difftool "difftastic"]
+  cmd = difft "$LOCAL" "$REMOTE"
 [gpg]
   program = gpg
 [pager]
-  log = delta --color-only
-  show = delta --color-only
-  diff = delta --color-only
-[interactive]
-  diffFilter = delta --color-only
+  difftool = true
+[diff]
+  external = difft --background light --display side-by-side-show-both
+  tool = difftastic
+  algorithm = patience
+  compactionHeuristic = true
 [commit]
   verbose = true
 [filter "lfs"]
@@ -70,5 +72,3 @@
   defaultBranch = main
 [pull]
   ff = only
-[delta]
-  line-numbers = true
