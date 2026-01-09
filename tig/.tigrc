@@ -3,3 +3,6 @@ set mouse = true
 
 bind main B !git rebase -i %(commit)
 bind diff B !git rebase -i %(commit)
+
+bind main ! ?git revert %(commit)
+bind diff ! ?git revert %(commit)
