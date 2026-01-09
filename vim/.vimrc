@@ -73,10 +73,6 @@ endif
 "incsearch
 set incsearch
 set hlsearch
-let g:incsearch#auto_nohlsearch = 1
-map /  <Plug>(incsearch-forward)
-map ?  <Plug>(incsearch-backward)
-map g/ <Plug>(incsearch-stay)
 
 " lightline
 set laststatus=2
