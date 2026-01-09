@@ -72,3 +72,5 @@
   defaultBranch = main
 [pull]
   ff = only
+[merge]
+  conflictStyle = zdiff3
