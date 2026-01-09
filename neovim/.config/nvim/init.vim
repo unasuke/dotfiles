@@ -118,3 +118,8 @@ augroup fern-custom
   autocmd! *
   autocmd FileType fern call s:init_fern()
 augroup end
+
+" tabs
+nnoremap <silent> <Space>j :tabnext<CR>
+nnoremap <silent> <Space>l :tabprevious<CR>
+nnoremap <silent> <Space>t :tabedit<CR>
