@@ -123,3 +123,8 @@ augroup end
 nnoremap <silent> <Space>j :tabnext<CR>
 nnoremap <silent> <Space>l :tabprevious<CR>
 nnoremap <silent> <Space>t :tabedit<CR>
+
+" incsearch
+set incsearch
+set hlsearch
+nnoremap <silent><Esc><Esc> :<C-u>set nohlsearch!<CR>
