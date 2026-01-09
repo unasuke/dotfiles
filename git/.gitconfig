@@ -56,7 +56,6 @@
   external = difft --background light --display side-by-side-show-both
   tool = difftastic
   algorithm = patience
-  compactionHeuristic = true
 [commit]
   verbose = true
 [filter "lfs"]
