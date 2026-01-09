@@ -1,4 +1,5 @@
 set main-view = id date author commit-title:graph=yes,refs=yes
+set mouse = true
 
 bind main B !git rebase -i %(commit)
 bind diff B !git rebase -i %(commit)
