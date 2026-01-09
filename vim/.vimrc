@@ -40,6 +40,7 @@ set ambiwidth=double
 set wildmode=list:full
 set nrformats-=octal
 setlocal iskeyword+=-
+set autoread
 
 "tabs
 nnoremap <silent> <Space>j :tabnext<CR>
