@@ -181,3 +181,5 @@ augroup fern-custom
   autocmd FileType fern call s:init_fern()
 augroup end
 
+" indent-guide
+let g:indent_guides_enable_on_vim_startup = 1
