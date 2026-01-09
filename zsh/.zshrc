@@ -159,3 +159,5 @@ fi
 if which aws_completer > /dev/null; then
   complete -C "$(which aws_completer)" aws
 fi
+
+alias vim='nvim'
