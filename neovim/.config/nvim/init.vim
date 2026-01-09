@@ -7,8 +7,8 @@ call plug#begin()
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'itchyny/lightline.vim'
 Plug 'lifepillar/vim-solarized8', {'branch': 'neovim'}
-"Plug 'lambdalisue/fern.vim'
-"Plug 'lambdalisue/fern-git-status.vim'
+Plug 'lambdalisue/fern.vim'
+Plug 'lambdalisue/fern-git-status.vim'
 "Plug 'ctrlpvim/ctrlp.vim'
 "Plug 'wakatime/vim-wakatime'
 "Plug 'airblade/vim-gitgutter'
@@ -105,3 +105,16 @@ endfunction
 
 " Telescope
 nnoremap <c-p> <cmd>Telescope find_files<cr>
+
+" fern
+let g:fern#default_hidden=1
+nmap <silent> <space>e :Fern . -drawer -toggle<CR>
+
+function! s:init_fern() abort
+  setlocal nonumber
+endfunction
+
+augroup fern-custom
+  autocmd! *
+  autocmd FileType fern call s:init_fern()
+augroup end
