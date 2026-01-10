@@ -119,8 +119,8 @@ if command -v kubectl 1>/dev/null 2>&1; then
   source <(kubectl completion zsh)
 fi
 
-if command -v rbenv 1>/dev/null 2>&1; then
-  eval "$(rbenv init - --no-rehash zsh)"
+if [[ -f $HOME/.rbenv/bin/rbenv ]]; then
+  eval "$(~/.rbenv/bin/rbenv init - --no-rehash zsh)"
 fi
 
 if [[ -f ~/.extrarc ]]; then
