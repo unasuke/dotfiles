@@ -488,3 +488,5 @@ tags
 
 .gcloud
 
+## Claude Code
+.claude/**/*.local.*
