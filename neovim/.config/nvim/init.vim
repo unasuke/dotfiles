@@ -132,3 +132,10 @@ nnoremap <silent> <Space>t :tabedit<CR>
 set incsearch
 set hlsearch
 nnoremap <silent><Esc><Esc> :<C-u>set nohlsearch!<CR>
+
+" auto reload
+augroup AutoRead
+  autocmd!
+  autocmd FocusGained,BufEnter,CursorHold * checktime
+augroup END
+
