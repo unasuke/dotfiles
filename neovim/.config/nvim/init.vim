@@ -27,6 +27,9 @@ set noswapfile
 set nobackup
 set noerrorbells
 set autoread
+set shiftwidth=2
+set tabstop=2
+set softtabstop=2
 
 "colorscheme setting
 set t_Co=256
