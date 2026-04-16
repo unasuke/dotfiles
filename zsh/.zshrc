@@ -105,6 +105,7 @@ if [[ -f ~/.local/bin/mise ]]; then
 fi
 
 source ~/.zsh.d/aliases.zsh
+source ~/.zsh.d/sshfwd.zsh
 
 # direnv
 if command -v direnv 1>/dev/null 2>&1; then
