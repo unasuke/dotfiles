@@ -1,6 +1,7 @@
 sshfwd() {
   local usage_server="usage (inside SSH session): sshfwd <remote_port> [<local_port>]"
   local usage_client="usage: sshfwd <host> <remote_port> [<local_port>]"
+  local usage_cancel="       sshfwd -c <host> <remote_port> [<local_port>]"
 
   if [[ $# -lt 1 ]]; then
     if [[ -n "${SSH_CONNECTION}" ]]; then
@@ -8,6 +9,36 @@ sshfwd() {
     else
       print -u2 -- "${usage_client}"
     fi
+    print -u2 -- "${usage_cancel}"
+    return 1
+  fi
+
+  if [[ "$1" == "-c" ]]; then
+    shift
+    if [[ $# -lt 2 ]]; then
+      print -u2 -- "usage: sshfwd -c <host> <remote_port> [<local_port>]"
+      return 1
+    fi
+    local host="$1"
+    local remote_port="$2"
+    local local_port="${3:-$remote_port}"
+    local spec="${local_port}:localhost:${remote_port}"
+
+    if ssh -O cancel -L "${spec}" "${host}" 2>/dev/null; then
+      print -- "cancelled forward ${host}:${remote_port} -> localhost:${local_port}"
+      return 0
+    fi
+
+    # ControlMaster cancel failed; find the backgrounded ssh -f -N -L process instead.
+    local pids
+    pids=($(pgrep -f "ssh.*-N.*-L.*${spec}.*${host}" 2>/dev/null))
+    if [[ ${#pids[@]} -gt 0 ]]; then
+      kill "${pids[@]}"
+      print -- "killed background ssh (PID ${pids[*]}) for ${host}:${remote_port} -> localhost:${local_port}"
+      return 0
+    fi
+
+    print -u2 -- "sshfwd: no active forward found for ${spec} on ${host}"
     return 1
   fi
 
