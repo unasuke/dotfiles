@@ -124,8 +124,8 @@ fi
 # fi
 
 if command -v rv 1>/dev/null 2>&1; then
-	eval "$(/home/unasuke/.local/share/mise/installs/github-spinel-coop-rv/latest/rv shell init zsh)"
-	eval "$(/home/unasuke/.local/share/mise/installs/github-spinel-coop-rv/latest/rv shell completions zsh)"
+	eval "$(rv shell init zsh)"
+	eval "$(rv shell completions zsh)"
 fi
 
 if [[ -f ~/.extrarc ]]; then
