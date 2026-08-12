@@ -63,3 +63,5 @@
   ff = only
 [merge]
   conflictStyle = zdiff3
+[wt]
+  basedir = .wt
