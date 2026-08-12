@@ -11,7 +11,6 @@ let g:lightline = {
   \ 'component_function' : {
   \   'modified' : 'LightLineModified',
   \   'readonly' : 'LightLineReadonly',
-  \   'fugitive' : 'LightLineFugitive',
   \   'filename' : 'LightLineFilename',
   \   'fileformat' : 'LightLineFileformat',
   \   'filetype' : 'LightLineFiletype',
@@ -21,33 +20,20 @@ let g:lightline = {
   \ }
 
 function! LightLineModified()
-  return &ft =~ 'help\|nerdtree\|undotree\|vimfiler\|gundo\|diff\|qf' ? '': @% == '[YankRing]' ? '' : &modified ? '+' : &modifiable ? '' : '-'
+  return &ft =~ 'help\|diff\|qf\|fern' ? '' : &modified ? '+' : &modifiable ? '' : '-'
 endfunction
 
 function! LightLineReadonly()
-  return &ft !~? 'help\|nerdtree\|undotree\|vimfiler\|gundo\|diff' && &readonly ? 'x' : ''
+  return &ft !~? 'help\|diff\|fern' && &readonly ? 'x' : ''
 endfunction
 
 function! LightLineFilename()
-  return &ft == 'nerdtree' ? 'NERDTree' :
-       \ &ft == 'undotree' ? 'undotree' :
-       \ &ft == 'diff' ? 'diffpanel' :
-       \ &ft == 'qf' ? 'Quickfix' :
-       \ &ft == 'vimshell' ? vimshell#get_status_string() :
-       \ @% == '[YankRing]' ? 'YankRing' :
-       \ &ft == 'unite' ? unite#get_status_string() :
+  return &ft ==# 'fern' ? 'fern' :
+       \ &ft ==# 'diff' ? 'diffpanel' :
+       \ &ft ==# 'qf'   ? 'Quickfix' :
        \ ('' != @% ? @% : '[No Name]') .
        \ ('' != LightLineReadonly() ? LightLineReadonly() . ' ' : '') .
        \ ('' != LightLineModified() ? ' ' . LightLineModified() : '')
-endfunction
-
-function! LightLineFugitive()
-  "let filename = expand('%:t')
-  if &ft !~? 'help\|nerdtree\|undotree\|quickrun\|vimfiler\|gundo\|qf' && @% != '[YankRing]' && exists("*fugitive#head")
-    let branch = fugitive#head()
-    return strlen(branch) ? branch : ''
-  endif
-  return ''
 endfunction
 
 function! LightLineFileformat()
@@ -63,8 +49,7 @@ function! LightLineFileencoding()
 endfunction
 
 function! LightLineMode()
-  return &ft == 'qf' ? '' :
-       \ @% == '[YankRing]' ? '' :
+  return &ft ==# 'qf' ? '' :
        \ winwidth(0) > 60 ? lightline#mode() : ''
 endfunction
 
