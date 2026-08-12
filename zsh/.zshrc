@@ -120,8 +120,13 @@ if command -v kubectl 1>/dev/null 2>&1; then
   source <(kubectl completion zsh)
 fi
 
-if [[ -f $HOME/.rbenv/bin/rbenv ]]; then
-  eval "$(~/.rbenv/bin/rbenv init - --no-rehash zsh)"
+# if [[ -f $HOME/.rbenv/bin/rbenv ]]; then
+#   eval "$(~/.rbenv/bin/rbenv init - --no-rehash zsh)"
+# fi
+
+if command -v rv 1>/dev/null 2>&1; then
+	eval "$(/home/unasuke/.local/share/mise/installs/github-spinel-coop-rv/latest/rv shell init zsh)"
+	eval "$(/home/unasuke/.local/share/mise/installs/github-spinel-coop-rv/latest/rv shell completions zsh)"
 fi
 
 if [[ -f ~/.extrarc ]]; then
