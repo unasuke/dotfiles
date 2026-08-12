@@ -156,6 +156,10 @@ if [[ $(which stern > /dev/null) ]]; then
   source <(stern --completion=zsh)
 fi
 
+if [[ -f $HOME/bin/git-wt ]]; then
+	eval "$(git-wt --init zsh)"
+fi
+
 # https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-completion.html
 if which aws_completer > /dev/null; then
   complete -C "$(which aws_completer)" aws
