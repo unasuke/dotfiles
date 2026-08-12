@@ -1,0 +1,43 @@
+[tools]
+1password = "latest"
+awscli = { version = "latest", symlink_bins = "true" }
+bat = "latest"
+btop = "latest"
+delta = "latest"
+deno = "latest"
+difftastic = "latest"
+ecspresso = "latest"
+gcloud = "latest"
+ghq = "latest"
+github-cli = "latest"
+"github:k1LoW/git-wt" = "latest"
+"github:k1LoW/mo" = "latest"
+"github:sorah/mairu" = "latest"
+"github:spinel-coop/rv" = "latest"
+"github:systalyze/utilyze" = "latest"
+go = "1.24.5"
+herdr = "latest"
+hivemind = "latest"
+neovim = "latest"
+node = "23.4.0"
+ollama = "latest"
+opentofu = "latest"
+peco = "latest"
+pinact = "latest"
+pnpm = "10"
+python = "3.12"
+rust = "1.91.1"
+terraform = "latest"
+terraform-ls = "latest"
+tokei = "latest"
+tree-sitter = "latest"
+usage = "latest"
+uv = "latest"
+yt-dlp = "latest"
+
+[env]
+
+[settings]
+idiomatic_version_file_enable_tools = ["ruby", "node", "terraform"]
+disable_tools = ["ruby"]
+auto_install = true
