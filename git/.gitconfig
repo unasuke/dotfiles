@@ -18,7 +18,6 @@
   shu = stash -u
   shp = stash pop
   c = commit -v
-  l = log --oneline --decorate --color --graph
   l = log --oneline --decorate --color --graph --all
   pl = pull
   ps = push
