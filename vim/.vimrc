@@ -80,9 +80,6 @@ if filereadable(expand('~/.vim/rc/lightline.vim'))
   source ~/.vim/rc/lightline.vim
 endif
 
-let g:vimshell_force_overwrite_statusline= 0
-autocmd CursorMoved ControlP let w:lightline = 0
-
 "convert file encode
 function! SetUU()
   set ff=unix
