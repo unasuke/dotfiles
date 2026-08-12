@@ -39,7 +39,7 @@ set backspace=indent,eol,start
 set ambiwidth=double
 set wildmode=list:full
 set nrformats-=octal
-setlocal iskeyword+=-
+set iskeyword+=-
 set autoread
 
 "tabs
@@ -68,7 +68,7 @@ elseif has("unix")
   set clipboard^=unnamedplus
 else
   set clipboard&
-  set clipboard=^unnamed,autoselect
+  set clipboard^=unnamed,autoselect
 endif
 
 "incsearch
