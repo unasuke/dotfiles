@@ -115,9 +115,9 @@ if [[ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.
   source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
 
-if command -v kubectl 1>/dev/null 2>&1; then
-  source <(kubectl completion zsh)
-fi
+# if command -v kubectl 1>/dev/null 2>&1; then
+#   source <(kubectl completion zsh)
+# fi
 
 # if [[ -f $HOME/.rbenv/bin/rbenv ]]; then
 #   eval "$(~/.rbenv/bin/rbenv init - --no-rehash zsh)"
@@ -144,21 +144,17 @@ if [[ -f $HOME/.xkb/custom.xkb ]]; then
   xkbcomp ~/.xkb/custom.xkb $DISPLAY
 fi
 
-if [[ $(which kubectl > /dev/null) ]]; then
-  source <(kubectl completion zsh)
-fi
-
-if [[ $(which helm > /dev/null) ]]; then
-  source <(helm completion zsh)
-fi
-
-if [[ $(which minikube > /dev/null) ]]; then
-  source <(minikube completion zsh)
-fi
-
-if [[ $(which stern > /dev/null) ]]; then
-  source <(stern --completion=zsh)
-fi
+# if command -v helm 1>/dev/null 2>&1; then
+#   source <(helm completion zsh)
+# fi
+# 
+# if command -v minikube 1>/dev/null 2>&1; then
+#   source <(minikube completion zsh)
+# fi
+# 
+# if command -v stern 1>/dev/null 2>&1; then
+#   source <(stern --completion=zsh)
+# fi
 
 if [[ -f $HOME/bin/git-wt ]]; then
 	eval "$(git-wt --init zsh)"
