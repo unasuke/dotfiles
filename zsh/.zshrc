@@ -148,7 +148,7 @@ fi
 #   source <(stern --completion=zsh)
 # fi
 
-if [[ -f $HOME/bin/git-wt ]]; then
+if command -v git-wt 1>/dev/null 2>&1; then
 	eval "$(git-wt --init zsh)"
 fi
 
