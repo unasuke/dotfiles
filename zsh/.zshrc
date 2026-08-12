@@ -40,7 +40,7 @@ zstyle ':completion:*' ignore-parents parent pwd ..
 
 #sudoのうしろでコマンド名補完
 zstyle 'completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin \
-	/usr/sbin /usr/bin /sbin /bin /usr/X11R6/bin
+	/usr/sbin /usr/bin /sbin /bin
 
 # ヒストリの設定
 HISTFILE=~/.zsh_history
@@ -134,14 +134,6 @@ fi
 
 if [[ -f $HOME/.profile ]]; then
   source $HOME/.profile
-fi
-
-if [[ -f $HOME/.Xresources ]]; then
-  xrdb -merge $HOME/.Xresources
-fi
-
-if [[ -f $HOME/.xkb/custom.xkb ]]; then
-  xkbcomp ~/.xkb/custom.xkb $DISPLAY
 fi
 
 # if command -v helm 1>/dev/null 2>&1; then
