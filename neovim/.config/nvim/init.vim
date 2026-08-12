@@ -17,6 +17,7 @@ Plug 'airblade/vim-gitgutter'
 "Plug 'hashivim/vim-terraform'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': 'v0.1.9' }
+Plug 'nvim-treesitter/nvim-treesitter'
 call plug#end()
 
 set number
@@ -139,3 +140,12 @@ augroup AutoRead
   autocmd FocusGained,BufEnter,CursorHold * checktime
 augroup END
 
+" tree-sitter
+lua <<EOF
+  vim.api.nvim_create_autocmd('FileType', {
+    callback = function(ctx)
+      if not pcall(vim.treesitter.start) then return end
+      vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+    end,
+  })
+EOF
