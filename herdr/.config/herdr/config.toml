@@ -1,0 +1,18 @@
+onboarding = false
+
+[keys]
+prefix = "ctrl+k"
+
+[ui]
+pane_gaps = false
+agent_panel_sort = "priority"
+
+[ui.toast]
+delivery = "herdr"
+delay_seconds = 1
+
+[ui.toast.herdr]
+position = "bottom-left"
+
+[experimental]
+pane_history = true
