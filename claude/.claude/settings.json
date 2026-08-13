@@ -26,7 +26,8 @@
     "ruby-lsp@claude-plugins-official": true,
     "sorah-spec@sorah-marketplace": true,
     "sorah-guides@sorah-marketplace": true,
-    "gopls-lsp@claude-plugins-official": true
+    "gopls-lsp@claude-plugins-official": true,
+    "use-workshop@canonical": true
   },
   "extraKnownMarketplaces": {
     "sorah-marketplace": {
@@ -39,6 +40,12 @@
       "source": {
         "source": "github",
         "repo": "GoogleChrome/modern-web-guidance"
+      }
+    },
+    "canonical": {
+      "source": {
+        "source": "github",
+        "repo": "canonical/use-workshop-skill"
       }
     }
   },
