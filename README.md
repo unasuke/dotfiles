@@ -14,7 +14,4 @@ $ ./other/ruby-versions.sh
 
 # need ghq
 $ ./other/repositories.sh
-
-# install dein.vim
-$ ./other/install_dein.bash
 ```
