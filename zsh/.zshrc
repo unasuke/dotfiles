@@ -158,3 +158,9 @@ if which aws_completer > /dev/null; then
 fi
 
 alias vim='nvim'
+
+if [[ -f ~/.grok/bin/grok ]]; then
+  export PATH="$HOME/.grok/bin:$PATH"
+  fpath=(~/.grok/completions/zsh $fpath)
+  autoload -Uz compinit && compinit -C
+fi
