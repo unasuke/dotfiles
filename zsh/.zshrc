@@ -29,6 +29,11 @@ fpath=(/usr/local/share/zsh-completions $fpath)
 fpath=(/usr/local/share/zsh $fpath)
 fpath=(~/.rbenv/completions $fpath)
 
+if [[ -f ~/.grok/bin/grok ]]; then
+  export PATH="$HOME/.grok/bin:$PATH"
+  fpath=(~/.grok/completions/zsh $fpath)
+fi
+
 autoload bashcompinit && bashcompinit
 autoload -Uz compinit && compinit
 
@@ -158,9 +163,3 @@ if which aws_completer > /dev/null; then
 fi
 
 alias vim='nvim'
-
-if [[ -f ~/.grok/bin/grok ]]; then
-  export PATH="$HOME/.grok/bin:$PATH"
-  fpath=(~/.grok/completions/zsh $fpath)
-  autoload -Uz compinit && compinit -C
-fi
