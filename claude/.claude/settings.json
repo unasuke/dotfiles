@@ -49,6 +49,7 @@
       }
     }
   },
+  "cleanupPeriodDays": 3650,
   "language": "Japanese",
   "plansDirectory": ".claude/plans",
   "skipWorkflowUsageWarning": true,
