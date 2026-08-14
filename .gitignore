@@ -1,7 +1,0 @@
-#vimの履歴
-.vim/.netrwhist
-~/.vim/.netrwhist
-
-#NeoBundle管理下
-/.vim/bundle/
-!.vim/
