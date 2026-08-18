@@ -2,6 +2,12 @@ export PATH=$PATH:/usr/local/share/git-core/contrib/diff-highlight
 
 # homebrew
 export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
+
+# Rancher Desktop
+if [[ -d ~/.rd/bin ]]; then
+  export PATH="$HOME/.rd/bin:$PATH"
+fi
+
 if type brew &>/dev/null
 then
   FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
