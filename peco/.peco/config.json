@@ -2,5 +2,11 @@
   "Keymap": {
     "C-j":  "peco.SelectDown",
     "C-k":  "peco.SelectUp"
+  },
+  "Style": {
+    "Basic": ["default", "on_default"],
+    "Selected": ["bold", "reverse"],
+    "Query": ["yellow", "bold"],
+    "Matched": ["magenta", "bold"]
   }
 }
