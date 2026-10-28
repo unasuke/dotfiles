@@ -124,13 +124,8 @@ fi
 #   source <(kubectl completion zsh)
 # fi
 
-# if [[ -f $HOME/.rbenv/bin/rbenv ]]; then
-#   eval "$(~/.rbenv/bin/rbenv init - --no-rehash zsh)"
-# fi
-
-if command -v rv 1>/dev/null 2>&1; then
-	eval "$(rv shell init zsh)"
-	eval "$(rv shell completions zsh)"
+if [[ -f $HOME/.rbenv/bin/rbenv ]]; then
+  eval "$(~/.rbenv/bin/rbenv init - --no-rehash zsh)"
 fi
 
 if [[ -f ~/.extrarc ]]; then
