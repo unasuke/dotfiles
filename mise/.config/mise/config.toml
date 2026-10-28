@@ -31,7 +31,7 @@ terraform = "latest"
 terraform-ls = "latest"
 tokei = "latest"
 tree-sitter = "latest"
-usage = "latest"
+usage = { version = "latest", workflow = "publish-cli.yml" }
 uv = "latest"
 yt-dlp = "latest"
 
