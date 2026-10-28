@@ -7,6 +7,8 @@ call plug#begin()
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'itchyny/lightline.vim'
 Plug 'lifepillar/vim-solarized8', {'branch': 'neovim'}
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+Plug 'catppuccin/vim', { 'as': 'catppuccin-vim' } " for lightline colorscheme
 Plug 'lambdalisue/fern.vim'
 Plug 'lambdalisue/fern-git-status.vim'
 "Plug 'ctrlpvim/ctrlp.vim'
@@ -36,12 +38,12 @@ nmap ; :
 "colorscheme setting
 set t_Co=256
 set background=dark
-let g:solarized_termtrans=1
-colorscheme solarized8_high
+colorscheme catppuccin-nvim
 
 " lightline (shared with neovim; see ~/.vim/rc/lightline.vim)
 if filereadable(expand('~/.vim/rc/lightline.vim'))
   source ~/.vim/rc/lightline.vim
+  let g:lightline.colorscheme = 'catppuccin_mocha'
 endif
 
 " Telescope
